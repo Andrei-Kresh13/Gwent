@@ -13,5 +13,5 @@
         android:layout_height="250dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/card2" />
+        app:srcCompat="@drawable/cardnature1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

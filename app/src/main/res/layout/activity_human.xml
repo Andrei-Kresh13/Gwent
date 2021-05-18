@@ -22,7 +22,7 @@
         android:layout_height="157dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/card1" />
+        app:srcCompat="@drawable/cardhuman1" />
 
     <ImageView
         android:id="@+id/imageView4"
