@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,6 +23,7 @@ import java.util.Random;
 public class GameField extends AppCompatActivity{
     ImageView card1,card2,card3,card4,card5,card_opponent1,card_opponent2,card_opponent3,card_opponent4,card_opponent5;
     Button start_game;
+    TextView points1,points2;
 
     ArrayList<Integer> cards;
     @Override
@@ -54,6 +56,9 @@ public class GameField extends AppCompatActivity{
         card_opponent3 = findViewById(R.id.card_opponent3);
         card_opponent4 = findViewById(R.id.card_opponent4);
         card_opponent5 = findViewById(R.id.card_opponent5);
+
+        points1 = findViewById(R.id.points1);
+        points2 = findViewById(R.id.points2);
 
         cards = new ArrayList<>();
         cards.add(100);
