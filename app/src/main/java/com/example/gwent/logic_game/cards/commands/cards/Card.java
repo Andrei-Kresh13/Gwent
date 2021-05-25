@@ -1,4 +1,4 @@
-package com.example.gwent.cards;
+package com.example.gwent.logic_game.cards.commands.cards;
 
 // Класс определяет карту
 public class Card {

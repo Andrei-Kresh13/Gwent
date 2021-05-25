@@ -1,6 +1,6 @@
-package com.example.gwent.cards.game;
+package com.example.gwent.logic_game.cards.commands.cards.game;
 
-import com.example.gwent.logic_game.cards.Pile;
+import com.example.gwent.logic_game.cards.commands.cards.Pile;
 import com.example.gwent.logic_game.cards.commands.SessionCommand;
 import com.example.gwent.logic_game.cards.commands.hooks.CommandHook;
 

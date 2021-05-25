@@ -1,7 +1,4 @@
-package com.example.gwent.logic_game.cards;
-
-import com.example.gwent.cards.Card;
-import com.example.gwent.cards.CardsHelper;
+package com.example.gwent.logic_game.cards.commands.cards;
 
 import java.util.ArrayList;
 import java.util.Collections;

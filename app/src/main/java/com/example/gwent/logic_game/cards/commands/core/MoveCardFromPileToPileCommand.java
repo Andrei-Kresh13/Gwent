@@ -1,7 +1,7 @@
 package com.example.gwent.logic_game.cards.commands.core;
 
-import com.example.gwent.cards.Card;
-import com.example.gwent.logic_game.cards.Pile;
+import com.example.gwent.logic_game.cards.commands.cards.Card;
+import com.example.gwent.logic_game.cards.commands.cards.Pile;
 import com.example.gwent.logic_game.cards.commands.BaseSessionCommand;
 
 public class MoveCardFromPileToPileCommand extends BaseSessionCommand {

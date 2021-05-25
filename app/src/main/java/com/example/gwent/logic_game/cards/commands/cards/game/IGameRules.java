@@ -1,4 +1,4 @@
-package com.example.gwent.cards.game;
+package com.example.gwent.logic_game.cards.commands.cards.game;
 
 public interface IGameRules {
     int PLAYERS_IN_GAME = 2;
