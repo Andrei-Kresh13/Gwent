@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/colods"
     android:screenOrientation="landscape"
-    tools:context=".Deck">
+    tools:context=".Colods.Deck">
 
     <Button
         android:id="@+id/button3"

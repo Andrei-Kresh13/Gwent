@@ -1,4 +1,4 @@
-package com.example.gwent;
+package com.example.gwent.Colods;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,12 +7,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
-public class Nature extends AppCompatActivity {
+import com.example.gwent.R;
+
+public class Human extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_warriors);
+        setContentView(R.layout.activity_human);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
@@ -26,5 +28,6 @@ public class Nature extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
+
     }
 }

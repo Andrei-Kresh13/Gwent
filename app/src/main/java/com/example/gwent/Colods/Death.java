@@ -1,4 +1,4 @@
-package com.example.gwent;
+package com.example.gwent.Colods;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,14 +7,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
-public class Human extends AppCompatActivity {
+import com.example.gwent.R;
+
+public class Death extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_human);
-
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setContentView(R.layout.activity_death);
 
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
@@ -27,5 +27,6 @@ public class Human extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
 
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 }

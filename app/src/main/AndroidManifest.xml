@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gwent">
-        <activity android:name=".Human"></activity>
-        <activity android:name=".Death" />
-        <activity android:name=".Nature" />
-        <activity android:name=".Deck" />
+        <activity android:name=".Colods.Human"></activity>
+        <activity android:name=".Colods.Death" />
+        <activity android:name=".Colods.Nature" />
+        <activity android:name=".Colods.Deck" />
         <activity android:name=".GameField" />
         <activity android:name=".MainActivity">
             <intent-filter>

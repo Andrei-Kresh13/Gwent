@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import com.example.gwent.Colods.Deck;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override

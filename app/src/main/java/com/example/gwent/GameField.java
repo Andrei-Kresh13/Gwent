@@ -171,7 +171,7 @@ public class GameField extends AppCompatActivity{
     }
 
 
-    public  class GameView extends View implements View.OnClickListener {
+    public  class GameView extends View {
         ConstraintLayout layout =(ConstraintLayout) findViewById(R.id.c_layout);
         @SuppressLint("ResourceType")
         ImageView cardhuman1 = findViewById(R.drawable.cardhuman1);
@@ -220,10 +220,7 @@ public class GameField extends AppCompatActivity{
             //firstCard.draw(canvas);
         }
 
-        @Override
-        public void onClick(View v) {
 
-        }
     }
 
 

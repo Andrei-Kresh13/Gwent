@@ -1,4 +1,4 @@
-package com.example.gwent;
+package com.example.gwent.Colods;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.gwent.R;
 
 public class Deck extends AppCompatActivity implements View.OnClickListener {
 
