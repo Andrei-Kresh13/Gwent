@@ -3,7 +3,11 @@ package com.example.gwent.logic_game.cards.commands.core;
 import com.example.gwent.logic_game.cards.commands.cards.Card;
 import com.example.gwent.logic_game.cards.commands.cards.Pile;
 import com.example.gwent.logic_game.cards.commands.BaseSessionCommand;
+import com.example.gwent.logic_game.cards.commands.exceptions.CardNotFoundException;
+import com.example.gwent.logic_game.cards.commands.exceptions.PileNotFoundException;
+import com.example.gwent.logic_game.cards.commands.validation.GameSessionValidations;
 
+//Перемещение карты из стопки в стопку
 public class MoveCardFromPileToPileCommand extends BaseSessionCommand {
     //must be the exact instance of the card that should be moved
     private Card mCardToMove;

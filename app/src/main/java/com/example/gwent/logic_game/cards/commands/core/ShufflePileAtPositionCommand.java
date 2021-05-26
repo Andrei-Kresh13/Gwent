@@ -4,7 +4,7 @@ import com.example.gwent.logic_game.cards.commands.cards.Pile;
 import com.example.gwent.logic_game.cards.commands.BaseSessionCommand;
 
 import java.util.Collections;
-
+//Перемешать стопку
 public class ShufflePileAtPositionCommand extends BaseSessionCommand {
     private int mPilePosition;
 

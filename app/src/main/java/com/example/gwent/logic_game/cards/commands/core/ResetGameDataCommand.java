@@ -1,7 +1,7 @@
 package com.example.gwent.logic_game.cards.commands.core;
 
 import com.example.gwent.logic_game.cards.commands.BaseSessionCommand;
-
+//Сброс состояния до настроек по умолчанию
 public class ResetGameDataCommand extends BaseSessionCommand {
     @Override
     public void execute() {
