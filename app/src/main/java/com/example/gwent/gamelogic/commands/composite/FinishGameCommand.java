@@ -1,8 +1,9 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.utils.LogUtils;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.utils.LogUtils;
+
 
 /**
  * Created by Yan-Home on 12/21/2014.

@@ -8,22 +8,14 @@ package com.example.gwent.gamelogic.cards;
 public class Card {
 
     public static class Suit {
-        public static final String CLUBS = "clubs";
-        public static final String DIAMONDS = "diamonds";
-        public static final String HEARTS = "hearts";
-        public static final String SPADES = "spades";
+        public static final String HUMAN = "human";
+        public static final String UNDEAD = "undead";
+        public static final String WILDNESS = "wildness";
+
     }
 
     public static class Rank {
-        public static final String SIX = "six";
-        public static final String SEVEN = "seven";
-        public static final String EIGHT = "eight";
-        public static final String NINE = "nine";
-        public static final String TEN = "ten";
-        public static final String JACK = "jack";
-        public static final String QUEEN = "queen";
-        public static final String KING = "king";
-        public static final String ACE = "ace";
+//прописать карты надо
     }
 
     private String mRank;

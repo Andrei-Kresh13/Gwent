@@ -1,15 +1,16 @@
 package com.example.gwent.gamelogic.commands.custom;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.commands.composite.MoveCardsListFromPileToPile;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.composite.MoveCardsListFromPileToPile;
+
 
 import java.util.Iterator;
 import java.util.List;
 
-import static com.yan.durak.gamelogic.cards.Pile.PileTags.FIELD_PILE;
+//import static com.yan.durak.gamelogic.cards.Pile.PileTags.FIELD_PILE;
 
 /**
  * Created by Yan-Home on 12/23/2014.

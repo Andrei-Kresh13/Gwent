@@ -1,16 +1,17 @@
 package com.example.gwent.gamelogic.commands.custom;
 
 
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.game.IGameRules;
-import com.yan.durak.gamelogic.player.IPlayer;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.game.IGameRules;
+import com.example.gwent.gamelogic.player.IPlayer;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.yan.durak.gamelogic.cards.Pile.PileTags.FIELD_PILE;
+//import static com.yan.durak.gamelogic.cards.Pile.PileTags.FIELD_PILE;
 
 /**
  * Created by Yan-Home on 12/21/2014.
@@ -22,7 +23,7 @@ import static com.yan.durak.gamelogic.cards.Pile.PileTags.FIELD_PILE;
 public class PlayerRetaliationRequestCommand extends BaseSessionCommand {
 
     private int mPlayerIndex;
-    private List<Pile> mRetaliatedPiles;
+    private List<Pile mRetaliatedPiles;
     private List<Pile> mPilesPendingRetaliation;
 
     @Override

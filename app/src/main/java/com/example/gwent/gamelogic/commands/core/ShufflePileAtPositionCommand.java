@@ -1,8 +1,9 @@
 package com.example.gwent.gamelogic.commands.core;
 
 
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+
 
 import java.util.Collections;
 

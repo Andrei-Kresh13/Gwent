@@ -1,10 +1,9 @@
 package com.example.gwent.gamelogic.player;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.communication.protocol.data.PlayerMetaData;
-import com.yan.durak.gamelogic.game.GameSession;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.game.GameSession;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,14 +17,13 @@ public abstract class BasePlayer implements IPlayer {
     protected final GameSession mGameSession;
     protected int mIndexInGame;
     protected int mPileIndex;
-    protected final PlayerMetaData mPlayerMetaData;
+
 
     public BasePlayer(final int indexInGame, final GameSession gameSession,
-                      final int pileIndex, final PlayerMetaData playerMetaData) {
+                      final int pileIndex) {
         mIndexInGame = indexInGame;
         mGameSession = gameSession;
         mPileIndex = pileIndex;
-        mPlayerMetaData = playerMetaData;
     }
 
     @Override
@@ -60,8 +58,5 @@ public abstract class BasePlayer implements IPlayer {
         return retList;
     }
 
-    @Override
-    public PlayerMetaData getPlayerMetaData() {
-        return mPlayerMetaData;
-    }
+
 }

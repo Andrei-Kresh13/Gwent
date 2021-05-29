@@ -1,12 +1,12 @@
 package com.example.gwent.gamelogic.commands.core;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.exceptions.CardNotFoundException;
-import com.yan.durak.gamelogic.exceptions.PileNotFoundException;
-import com.yan.durak.gamelogic.validation.GameSessionValidations;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.exceptions.CardNotFoundException;
+import com.example.gwent.gamelogic.exceptions.PileNotFoundException;
+import com.example.gwent.gamelogic.validation.GameSessionValidations;
 
 /**
  * Created by ybra on 19.12.2014.

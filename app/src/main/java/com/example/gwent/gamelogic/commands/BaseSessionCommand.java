@@ -1,7 +1,8 @@
 package com.example.gwent.gamelogic.commands;
 
 
-import com.yan.durak.gamelogic.game.GameSession;
+import com.example.gwent.gamelogic.game.GameSession;
+
 
 /**
  * Created by ybra on 19.12.2014.

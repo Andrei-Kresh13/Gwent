@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.example.gwent.R;
 
-public class Death extends AppCompatActivity {
+public class Undead extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

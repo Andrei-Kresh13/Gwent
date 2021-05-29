@@ -1,9 +1,10 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.commands.core.MoveCardFromPileToPileCommand;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.core.MoveCardFromPileToPileCommand;
+
 
 import java.util.ArrayList;
 import java.util.List;

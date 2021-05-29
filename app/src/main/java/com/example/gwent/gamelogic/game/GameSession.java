@@ -1,11 +1,12 @@
 package com.example.gwent.gamelogic.game;
 
 
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.SessionCommand;
-import com.yan.durak.gamelogic.commands.hooks.CommandHook;
-import com.yan.durak.gamelogic.exceptions.NullCommandException;
-import com.yan.durak.gamelogic.player.IPlayer;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.SessionCommand;
+import com.example.gwent.gamelogic.commands.hooks.CommandHook;
+import com.example.gwent.gamelogic.exceptions.NullCommandException;
+import com.example.gwent.gamelogic.player.IPlayer;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,7 +56,7 @@ public class GameSession {
      * Adding command to execution queue.
      * Command will be executed once it turn will come.
      *
-     * @throws NullCommandException in case added command is null.
+     * @throws com.example.gwent.gamelogic.exceptions.NullCommandException in case added command is null.
      */
     public void addCommand(final SessionCommand command) {
         if (command == null)

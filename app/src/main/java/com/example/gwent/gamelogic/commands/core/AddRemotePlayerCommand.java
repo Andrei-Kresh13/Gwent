@@ -1,13 +1,14 @@
 package com.example.gwent.gamelogic.commands.core;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.CardsHelper;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.commands.custom.AddPileCommand;
-import com.yan.durak.gamelogic.communication.connection.ConnectedPlayer;
-import com.yan.durak.gamelogic.player.RemotePlayer;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.CardsHelper;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.custom.AddPileCommand;
+import com.example.gwent.gamelogic.communication.connection.ConnectedPlayer;
+import com.example.gwent.gamelogic.player.RemotePlayer;
+
 
 import java.util.ArrayList;
 

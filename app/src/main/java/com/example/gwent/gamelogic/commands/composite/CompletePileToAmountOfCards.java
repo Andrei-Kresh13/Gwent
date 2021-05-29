@@ -1,8 +1,9 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * We want pile to have certain amount of cards. If it has less , we pulling
  * additional cards from another pile.
  */
+//Поменять условие
 public class CompletePileToAmountOfCards extends BaseSessionCommand {
 
     private int mFromPileIndex;

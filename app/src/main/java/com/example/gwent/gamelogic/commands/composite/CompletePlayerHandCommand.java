@@ -1,9 +1,10 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.game.IGameRules;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.game.IGameRules;
+
 
 /**
  * Created by Yan-Home on 12/23/2014.

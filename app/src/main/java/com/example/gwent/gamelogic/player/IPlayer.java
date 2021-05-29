@@ -1,9 +1,9 @@
 package com.example.gwent.gamelogic.player;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.communication.protocol.data.PlayerMetaData;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.Pile;
+
 
 import java.util.Collection;
 import java.util.List;
@@ -48,5 +48,5 @@ public interface IPlayer {
     /**
      * Contains data about the player account etc...
      */
-    PlayerMetaData getPlayerMetaData();
+
 }

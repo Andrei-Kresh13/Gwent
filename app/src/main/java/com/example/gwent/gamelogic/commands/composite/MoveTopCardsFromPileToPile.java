@@ -1,11 +1,14 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+//Изменить логику
 
 /**
  * Created by ybra on 19.12.2014.

@@ -1,14 +1,15 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.CardsHelper;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.commands.core.ResetGameDataCommand;
-import com.yan.durak.gamelogic.commands.core.SelectTrumpCommand;
-import com.yan.durak.gamelogic.commands.core.ShufflePileAtPositionCommand;
-import com.yan.durak.gamelogic.commands.custom.AddPileCommand;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.CardsHelper;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.core.ResetGameDataCommand;
+import com.example.gwent.gamelogic.commands.core.SelectTrumpCommand;
+import com.example.gwent.gamelogic.commands.core.ShufflePileAtPositionCommand;
+import com.example.gwent.gamelogic.commands.custom.AddPileCommand;
+
 
 import java.util.ArrayList;
 

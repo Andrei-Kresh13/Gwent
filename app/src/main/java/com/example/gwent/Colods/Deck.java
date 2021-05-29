@@ -44,11 +44,11 @@ public class Deck extends AppCompatActivity implements View.OnClickListener {
         Button btn = (Button) view;
         switch (btn.getId()) {
             case R.id.button3:
-                Intent intent = new Intent(this, Nature.class);
+                Intent intent = new Intent(this, Wildness.class);
                 startActivity(intent);
                 break;
             case R.id.button4:
-                Intent intent1 = new Intent(this, Death.class);
+                Intent intent1 = new Intent(this, Undead.class);
                 startActivity(intent1);
                 break;
             case R.id.button5:

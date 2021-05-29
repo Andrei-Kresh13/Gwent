@@ -1,16 +1,15 @@
 package com.example.gwent.gamelogic.commands.custom;
 
 
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.player.IPlayer;
-
-import static com.yan.durak.gamelogic.cards.Pile.PileTags.PLAYER_PILE_TAG;
-import static com.yan.durak.gamelogic.cards.Pile.PileTags.STOCK_PILE_TAG;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.player.IPlayer;
+/*import static com.yan.durak.gamelogic.cards.Pile.PileTags.PLAYER_PILE_TAG;
+import static com.yan.durak.gamelogic.cards.Pile.PileTags.STOCK_PILE_TAG;*/
 
 /**
  * Created by Yan-Home on 12/25/2014.
- */
+ */ //Проверить, мб поменять
 public class CheckWinningConditionCommand extends BaseSessionCommand {
 
     private boolean mGameOver;

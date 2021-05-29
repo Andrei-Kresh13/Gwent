@@ -1,8 +1,8 @@
 package com.example.gwent.gamelogic.commands.custom;
 
 
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.player.IPlayer;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.player.IPlayer;
 
 /**
  * Created by Yan-Home on 12/23/2014.

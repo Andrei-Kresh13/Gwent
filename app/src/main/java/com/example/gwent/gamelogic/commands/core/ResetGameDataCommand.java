@@ -1,11 +1,10 @@
 package com.example.gwent.gamelogic.commands.core;
 
 
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+
 
 /**
- * Created by Yan-Home on 12/22/2014.
- * <p/>
  * This command discards any state changes on the game , and resets the game
  * to its default initial state.
  */

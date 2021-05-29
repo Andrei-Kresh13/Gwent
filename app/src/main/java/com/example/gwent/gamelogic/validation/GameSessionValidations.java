@@ -1,8 +1,8 @@
 package com.example.gwent.gamelogic.validation;
 
 
-import com.yan.durak.gamelogic.game.GameSession;
-import com.yan.durak.gamelogic.game.IGameRules;
+import com.example.gwent.gamelogic.game.GameSession;
+import com.example.gwent.gamelogic.game.IGameRules;
 
 /**
  * Created by Yan-Home on 1/22/2015.

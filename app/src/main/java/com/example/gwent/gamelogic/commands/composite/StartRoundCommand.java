@@ -1,16 +1,23 @@
 package com.example.gwent.gamelogic.commands.composite;
 
 
-import com.yan.durak.gamelogic.cards.CardsHelper;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.commands.control.AttackRequestControlCommand;
-import com.yan.durak.gamelogic.commands.control.PlayerThrowInRequestControlCommand;
-import com.yan.durak.gamelogic.commands.control.RetaliationExecutionControlCommand;
-import com.yan.durak.gamelogic.commands.control.RetaliationValidationControlCommand;
-import com.yan.durak.gamelogic.commands.custom.*;
-import com.yan.durak.gamelogic.game.IGameRules;
-import com.yan.durak.gamelogic.player.IPlayer;
+import com.example.gwent.gamelogic.cards.CardsHelper;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.control.AttackRequestControlCommand;
+import com.example.gwent.gamelogic.commands.control.RetaliationExecutionControlCommand;
+import com.example.gwent.gamelogic.commands.control.RetaliationValidationControlCommand;
+import com.example.gwent.gamelogic.commands.custom.CheckFieldPilesStatusCommand;
+import com.example.gwent.gamelogic.commands.custom.CheckWinningConditionCommand;
+import com.example.gwent.gamelogic.commands.custom.LogPilesStatusCommand;
+import com.example.gwent.gamelogic.commands.custom.MoveAllFieldPilesCardsCommand;
+import com.example.gwent.gamelogic.commands.custom.PlayerAttackRequestCommand;
+import com.example.gwent.gamelogic.commands.custom.PlayerRetaliationRequestCommand;
+import com.example.gwent.gamelogic.commands.custom.PlayerTakesCardsFromFieldCommand;
+import com.example.gwent.gamelogic.commands.custom.PlayerThrowInRequestCommand;
+import com.example.gwent.gamelogic.game.IGameRules;
+import com.example.gwent.gamelogic.player.IPlayer;
+
 
 import java.util.Collection;
 
@@ -114,7 +121,7 @@ public class StartRoundCommand extends BaseSessionCommand {
         getGameSession().executeCommand(throwInRequestCommand);
 
         //control the throw in command
-        getGameSession().executeCommand(new PlayerThrowInRequestControlCommand());
+        getGameSession().executeCommand(new PlayerThrowInRequestCommand());
 
         return throwInRequestCommand.getThrowInCards().size();
     }

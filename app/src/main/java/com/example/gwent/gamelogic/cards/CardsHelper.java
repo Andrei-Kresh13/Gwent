@@ -14,16 +14,8 @@ public class CardsHelper {
 
     public static final int MAX_CARDS_IN_DECK = 36;
 
-    private static List<String> ORDERED_36_DECK_RANKS = Arrays.asList(new String[]{
-            Card.Rank.SIX,
-            Card.Rank.SEVEN,
-            Card.Rank.EIGHT,
-            Card.Rank.NINE,
-            Card.Rank.TEN,
-            Card.Rank.JACK,
-            Card.Rank.QUEEN,
-            Card.Rank.KING,
-            Card.Rank.ACE
+    private static List<String> ORDERED_15_DECK_RANKS = Arrays.asList(new String[]{
+            //прописать карты
     });
 
     /**
@@ -38,8 +30,8 @@ public class CardsHelper {
 
         //suits are equal case
         if (leftCard.getSuit().equals(rightCard.getSuit())) {
-            final int card1Index = ORDERED_36_DECK_RANKS.indexOf(leftCard.getRank());
-            final int card2Index = ORDERED_36_DECK_RANKS.indexOf(rightCard.getRank());
+            final int card1Index = ORDERED_15_DECK_RANKS.indexOf(leftCard.getRank());
+            final int card2Index = ORDERED_15_DECK_RANKS.indexOf(rightCard.getRank());
             return card2Index - card1Index;
         }
         //suits are not equal , but left one is trump
@@ -58,9 +50,9 @@ public class CardsHelper {
 
     public static ArrayList<Card> create36Deck() {
         final ArrayList<Card> deck = new ArrayList<>(36);
-        deck.addAll(createSuit(Card.Suit.CLUBS));
-        deck.addAll(createSuit(Card.Suit.DIAMONDS));
-        deck.addAll(createSuit(Card.Suit.HEARTS));
+        deck.addAll(createSuit(Card.Suit.HUMAN));
+        deck.addAll(createSuit(Card.Suit.UNDEAD));
+        deck.addAll(createSuit(Card.Suit.WILDNESS));
         deck.addAll(createSuit(Card.Suit.SPADES));
         return deck;
     }

@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.example.gwent.R;
 
-public class Nature extends AppCompatActivity {
+public class Wildness extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

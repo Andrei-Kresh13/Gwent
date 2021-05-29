@@ -1,25 +1,25 @@
 package com.example.gwent.gamelogic.commands.custom.startgame;
 
 
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
-import com.yan.durak.gamelogic.commands.composite.PrepareGameSessionCommand;
-import com.yan.durak.gamelogic.commands.composite.StartRoundCommand;
-import com.yan.durak.gamelogic.commands.core.AddBotPlayerCommand;
-import com.yan.durak.gamelogic.commands.core.AddRemotePlayerCommand;
-import com.yan.durak.gamelogic.commands.custom.IdentifyNextRoundPlayersCommand;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.BotJoinsGameBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.GameOverBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionAttackBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionRetaliateBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionTakeCardsBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionThrowInBroadcastPostHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionThrowInBroadcastPreHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.RemoteClientJoinsGameBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.broadcast.RemoteClientsCardsMoveBroadcastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.unicast.RemoteClientsGameSetupUnicastHook;
-import com.yan.durak.gamelogic.commands.hooks.notifiers.unicast.RemoteClientsWrongCoverageNotifierUnicastHook;
-import com.yan.durak.gamelogic.communication.connection.ConnectedPlayer;
-import com.yan.durak.gamelogic.validation.GameSessionValidations;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.commands.composite.PrepareGameSessionCommand;
+import com.example.gwent.gamelogic.commands.composite.StartRoundCommand;
+import com.example.gwent.gamelogic.commands.core.AddBotPlayerCommand;
+import com.example.gwent.gamelogic.commands.core.AddRemotePlayerCommand;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.BotJoinsGameBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.GameOverBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionAttackBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionRetaliateBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionTakeCardsBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionThrowInBroadcastPostHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.PlayerActionThrowInBroadcastPreHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.RemoteClientJoinsGameBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.broadcast.RemoteClientsCardsMoveBroadcastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.unicast.RemoteClientsGameSetupUnicastHook;
+import com.example.gwent.gamelogic.commands.hooks.notifiers.unicast.RemoteClientsWrongCoverageNotifierUnicastHook;
+import com.example.gwent.gamelogic.communication.connection.ConnectedPlayer;
+import com.example.gwent.gamelogic.validation.GameSessionValidations;
+
 
 /**
  * Created by Yan-Home on 12/22/2014.

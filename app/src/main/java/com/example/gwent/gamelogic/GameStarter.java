@@ -1,10 +1,11 @@
 package com.example.gwent.gamelogic;
 
 
-import com.yan.durak.gamelogic.commands.custom.startgame.GameStartCommand;
-import com.yan.durak.gamelogic.communication.connection.ConnectedPlayer;
-import com.yan.durak.gamelogic.game.GameSession;
-import com.yan.durak.gamelogic.game.IGameRules;
+import com.example.gwent.gamelogic.commands.custom.startgame.GameStartCommand;
+import com.example.gwent.gamelogic.communication.connection.ConnectedPlayer;
+import com.example.gwent.gamelogic.game.GameSession;
+import com.example.gwent.gamelogic.game.IGameRules;
+
 
 /**
  * Created by ybra on 19.12.2014.

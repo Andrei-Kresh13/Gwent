@@ -1,9 +1,10 @@
 package com.example.gwent.gamelogic.commands.custom;
 
 
-import com.yan.durak.gamelogic.cards.Card;
-import com.yan.durak.gamelogic.cards.Pile;
-import com.yan.durak.gamelogic.commands.BaseSessionCommand;
+import com.example.gwent.gamelogic.cards.Card;
+import com.example.gwent.gamelogic.cards.Pile;
+import com.example.gwent.gamelogic.commands.BaseSessionCommand;
+
 
 import java.util.List;
 
