@@ -136,7 +136,7 @@ public class GameField extends AppCompatActivity{
                 card4.setVisibility(View.VISIBLE);
                 card5.setVisibility(View.VISIBLE);
 
-                assinImages(cards.get(5), card_opponent1);
+                /*assinImages(cards.get(5), card_opponent1);
                 assinImages(cards.get(6), card_opponent2);
                 assinImages(cards.get(7), card_opponent3);
                 assinImages(cards.get(8), card_opponent4);
@@ -146,7 +146,7 @@ public class GameField extends AppCompatActivity{
                 card_opponent2.setVisibility(View.VISIBLE);
                 card_opponent3.setVisibility(View.VISIBLE);
                 card_opponent4.setVisibility(View.VISIBLE);
-                card_opponent5.setVisibility(View.VISIBLE);
+                card_opponent5.setVisibility(View.VISIBLE);*/
             }
         });
     }
