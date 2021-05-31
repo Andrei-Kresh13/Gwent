@@ -33,19 +33,19 @@
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="129dp"
-        android:layout_height="203dp"
-        android:layout_marginStart="512dp"
-        android:layout_marginLeft="512dp"
-        android:layout_marginTop="172dp"
+        android:layout_width="79dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="524dp"
+        android:layout_marginLeft="524dp"
+        android:layout_marginTop="208dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cardwildness4" />
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="134dp"
-        android:layout_height="183dp"
+        android:layout_width="102dp"
+        android:layout_height="135dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,19 +53,21 @@
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="166dp"
-        android:layout_height="189dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="124dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView17"
         app:srcCompat="@drawable/cardwildness6" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="133dp"
-        android:layout_height="199dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_width="95dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView18"
