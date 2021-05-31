@@ -172,7 +172,40 @@ public class GameField extends AppCompatActivity{
                 image.setImageResource(R.drawable.cardhuman6);
                 break;
             case 200:
-                image.setImageResource(R.drawable.cardnature1);
+                image.setImageResource(R.drawable.cardwildness1);
+                break;
+            case 201:
+                image.setImageResource(R.drawable.cardwildness2);
+                break;
+            case 202:
+                image.setImageResource(R.drawable.cardwildness3);
+                break;
+            case 203:
+                image.setImageResource(R.drawable.cardwildness4);
+                break;
+            case 204:
+                image.setImageResource(R.drawable.cardwildness5);
+                break;
+            case 205:
+                image.setImageResource(R.drawable.cardwildness6);
+                break;
+            case 206:
+                image.setImageResource(R.drawable.cardwildness7);
+                break;
+            case 300:
+                image.setImageResource(R.drawable.carddeath);
+                break;
+            case 301:
+                image.setImageResource(R.drawable.carddeath2);
+                break;
+            case 302:
+                image.setImageResource(R.drawable.carddeath3);
+                break;
+            case 303:
+                image.setImageResource(R.drawable.carddeath4);
+                break;
+            case 304:
+                image.setImageResource(R.drawable.carddeath5);
                 break;
         }
 
@@ -184,7 +217,7 @@ public class GameField extends AppCompatActivity{
         @SuppressLint("ResourceType")
         ImageView cardhuman1 = findViewById(R.drawable.cardhuman1);
         @SuppressLint("ResourceType")
-        ImageView cardnature1 = findViewById(R.drawable.cardnature1);
+        ImageView cardnature1 = findViewById(R.drawable.cardwildness1);
         @SuppressLint("ResourceType")
         ImageView cardhuman2 = findViewById(R.drawable.cardhuman2);
         @SuppressLint("ResourceType")

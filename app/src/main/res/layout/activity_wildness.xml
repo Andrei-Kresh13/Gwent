@@ -13,7 +13,7 @@
         android:layout_height="178dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cardnature1" />
+        app:srcCompat="@drawable/cardwildness1" />
 
     <ImageView
         android:id="@+id/imageView14"
