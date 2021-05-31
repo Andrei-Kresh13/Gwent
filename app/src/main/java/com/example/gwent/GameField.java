@@ -74,16 +74,7 @@ public class GameField extends AppCompatActivity{
         cards.add(102);
         cards.add(103);
         cards.add(104);
-        cards.add(105);
-        cards.add(107);
-        cards.add(108);
-        cards.add(109);
-        cards.add(110);
-        cards.add(111);
-        cards.add(112);
-        cards.add(113);
-        cards.add(114);
-        cards.add(115);
+
 
         cards.add(200);
         cards.add(201);
@@ -93,31 +84,13 @@ public class GameField extends AppCompatActivity{
         cards.add(205);
         cards.add(206);
         cards.add(207);
-        cards.add(208);
-        cards.add(209);
-        cards.add(210);
-        cards.add(211);
-        cards.add(212);
-        cards.add(213);
-        cards.add(214);
-        cards.add(215);
 
         cards.add(300);
         cards.add(301);
         cards.add(302);
         cards.add(303);
         cards.add(304);
-        cards.add(305);
-        cards.add(306);
-        cards.add(307);
-        cards.add(308);
-        cards.add(309);
-        cards.add(310);
-        cards.add(311);
-        cards.add(312);
-        cards.add(313);
-        cards.add(314);
-        cards.add(315);
+
 
         start_game.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,7 +109,7 @@ public class GameField extends AppCompatActivity{
                 card4.setVisibility(View.VISIBLE);
                 card5.setVisibility(View.VISIBLE);
 
-                /*assinImages(cards.get(5), card_opponent1);
+                assinImages(cards.get(5), card_opponent1);
                 assinImages(cards.get(6), card_opponent2);
                 assinImages(cards.get(7), card_opponent3);
                 assinImages(cards.get(8), card_opponent4);
@@ -146,7 +119,7 @@ public class GameField extends AppCompatActivity{
                 card_opponent2.setVisibility(View.VISIBLE);
                 card_opponent3.setVisibility(View.VISIBLE);
                 card_opponent4.setVisibility(View.VISIBLE);
-                card_opponent5.setVisibility(View.VISIBLE);*/
+                card_opponent5.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -164,12 +137,6 @@ public class GameField extends AppCompatActivity{
                 break;
             case 103:
                 image.setImageResource(R.drawable.cardhuman4);
-                break;
-            case 104:
-                image.setImageResource(R.drawable.cardhuman5);
-                break;
-            case 105:
-                image.setImageResource(R.drawable.cardhuman6);
                 break;
             case 200:
                 image.setImageResource(R.drawable.cardwildness1);
@@ -208,59 +175,6 @@ public class GameField extends AppCompatActivity{
                 image.setImageResource(R.drawable.carddeath5);
                 break;
         }
-
-    }
-
-
-    public  class GameView extends View {
-        ConstraintLayout layout =(ConstraintLayout) findViewById(R.id.c_layout);
-        @SuppressLint("ResourceType")
-        ImageView cardhuman1 = findViewById(R.drawable.cardhuman1);
-        @SuppressLint("ResourceType")
-        ImageView cardnature1 = findViewById(R.drawable.cardwildness1);
-        @SuppressLint("ResourceType")
-        ImageView cardhuman2 = findViewById(R.drawable.cardhuman2);
-        @SuppressLint("ResourceType")
-        ImageView cardhuman3 = findViewById(R.drawable.cardhuman3);
-        @SuppressLint("ResourceType")
-        ImageView cardhuman4 = findViewById(R.drawable.cardhuman4);
-        @SuppressLint("ResourceType")
-        ImageView cardhuman5 = findViewById(R.drawable.cardhuman5);
-        @SuppressLint("ResourceType")
-        ImageView cardhuman6 = findViewById(R.drawable.cardhuman6);
-
-       ImageView[] colods=new ImageView[]{cardhuman1, cardnature1,cardhuman2,cardhuman3,cardhuman4,cardhuman5,cardhuman6};
-        Random random = new Random();
-
-
-
-        public GameView(Context context) {
-            super(context);
-        }
-        private int viewWidth,viewHeight;
-        private int EnemyPoints = 0;
-        private int MyPoints = 0;
-
-        @Override
-        protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-            super.onSizeChanged(w, h, oldw, oldh);
-            viewWidth = w;
-            viewHeight = h;
-        }
-
-        @Override
-        protected void onDraw(Canvas canvas) {
-            super.onDraw(canvas);
-            canvas.drawARGB(250, 127, 199, 255); // заливаем цветом
-            Paint p = new Paint();
-            p.setAntiAlias(true);
-            p.setTextSize(55.0f);
-            p.setColor(Color.WHITE);
-            canvas.drawText(EnemyPoints +"", viewWidth - 100, 70, p);
-            canvas.drawText(MyPoints +"", viewWidth - 100, 700,p);
-            //firstCard.draw(canvas);
-        }
-
 
     }
 

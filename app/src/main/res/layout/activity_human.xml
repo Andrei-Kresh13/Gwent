@@ -8,15 +8,6 @@
     tools:context=".Colods.Human">
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="163dp"
-        android:layout_height="144dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cardhuman5" />
-
-    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="154dp"
         android:layout_height="157dp"
@@ -47,13 +38,5 @@
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cardhuman4" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="146dp"
-        android:layout_height="158dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:srcCompat="@drawable/cardhuman6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
