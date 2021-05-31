@@ -4,14 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:screenOrientation="landscape"
-    tools:context=".Colods.Wildness">
+    tools:context=".Testing">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="194dp"
-        android:layout_height="250dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cardnature1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

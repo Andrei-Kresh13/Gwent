@@ -24,12 +24,20 @@ public class GameField extends AppCompatActivity{
     ImageView card1,card2,card3,card4,card5,card_opponent1,card_opponent2,card_opponent3,card_opponent4,card_opponent5;
     Button start_game;
     TextView points1,points2;
+    private TextView nickname1, nickname2;
 
     ArrayList<Integer> cards;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_field);
+
+        nickname1 = findViewById(R.id.name1);
+        nickname2 = findViewById(R.id.name2);
+        nickname1.setText(getIntent().getStringExtra("nickname1"));
+        nickname2.setText(getIntent().getStringExtra("nickname2"));
+
+
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         View decorView = getWindow().getDecorView();

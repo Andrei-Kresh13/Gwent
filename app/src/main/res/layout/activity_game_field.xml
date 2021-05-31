@@ -8,13 +8,25 @@
     android:screenOrientation="landscape"
     tools:context=".GameField">
 
+    <ImageView
+        android:id="@+id/gamefield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gamefield" />
+
     <TextView
         android:id="@+id/points1"
         android:layout_width="71dp"
         android:layout_height="68dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="176dp"
         android:text="0"
         android:textSize="32dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +37,7 @@
         android:id="@+id/points2"
         android:layout_width="65dp"
         android:layout_height="61dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="176dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:text="0"
@@ -40,8 +52,35 @@
         android:text="Начать игру"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="89dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        android:textColor="#80228F"
+        android:textColorHint="#9C27B0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/points1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="85dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="28dp"
+        android:text="TextView"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/points2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
