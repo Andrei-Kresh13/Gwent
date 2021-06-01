@@ -1,14 +1,8 @@
 package com.example.gwent;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -18,13 +12,58 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class GameField extends AppCompatActivity{
-    ImageView card1,card2,card3,card4,card5,card_opponent1,card_opponent2,card_opponent3,card_opponent4,card_opponent5;
+    ImageView card1_player, card2_player, card3_player, card4_player, card5_player,card_opponent1,card_opponent2,card_opponent3,card_opponent4,card_opponent5;
     Button start_game;
     TextView points1,points2;
     private TextView nickname1, nickname2;
+
+        Card card1 = new Card("Колдун", 6);
+        Card card2= new Card("Оборотень", 5);
+        Card card3 = new Card("Пустынный червь", 7);
+        Card card4 = new Card("Голем", 7);
+        Card card5 = (new Card("Требушет", 6));
+        Card card6 =(new Card("Всадник", 5));
+        Card card7=(new Card("Арбалетчик", 3));
+        Card card8 = (new Card("Нефтяной разведчик", 3));
+        Card card9=(new Card("Друид старец", 5));
+        Card card10=(new Card("Колдовской ворон", 4));
+        Card card11=(new Card("Дух", 4));
+        Card card12=(new Card("Эльф-Лучник", 4));
+        Card card13=(new Card("Ящеролюд-воин", 5));
+        Card card14=(new Card("Ассасин ордена", 4));
+        Card card15=(new Card("Цветолиск", 7));
+        Card card16=(new Card("Костяной лучник", 3));
+        Card card17=(new Card("Гидра", 7));
+        Card card18=(new Card("Костяной рекрут", 2));
+        Card card19=(new Card("Темный пехотенец", 3));
+        Card card20=(new Card("Скелет-маг", 6));
+        Card card21=(new Card("Гаргулья", 4));
+
+        ArrayList arrayList = new ArrayList();
+           /* arrayList.add(card1);
+            arrayList.add(card2);
+            arrayList.add(card3);
+            arrayList.add(card4);
+            arrayList.add(card5);
+            arrayList.add(card6);
+        arrayList.add(card7);
+        arrayList.add(card8);
+        arrayList.add(card9);
+        arrayList.add(card10);
+        arrayList.add(card11);
+        arrayList.add(card12);
+        arrayList.add(card13);
+        arrayList.add(card14);
+        arrayList.add(card15);
+        arrayList.add(card16);
+        arrayList.add(card17);
+        arrayList.add(card18);
+        arrayList.add(card19);
+        arrayList.add(card20);
+        arrayList.add(card21);*/
+
 
     int score1 = 0,score2 = 0;
 
@@ -55,17 +94,12 @@ public class GameField extends AppCompatActivity{
 
         start_game = findViewById(R.id.start_game);
 
-        card1 = findViewById(R.id.card1);
-        card2 = findViewById(R.id.card2);
-        card3 = findViewById(R.id.card3);
-        card4 = findViewById(R.id.card4);
-        card5 = findViewById(R.id.card5);
+        card1_player = findViewById(R.id.card1);
+        card2_player = findViewById(R.id.card2);
+        card3_player = findViewById(R.id.card3);
+        card4_player = findViewById(R.id.card4);
+        card5_player = findViewById(R.id.card5);
 
-        card_opponent1 = findViewById(R.id.card_opponent1);
-        card_opponent2 = findViewById(R.id.card_opponent2);
-        card_opponent3 = findViewById(R.id.card_opponent3);
-        card_opponent4 = findViewById(R.id.card_opponent4);
-        card_opponent5 = findViewById(R.id.card_opponent5);
 
         points1 =(TextView) findViewById(R.id.points1);
         points2 =(TextView) findViewById(R.id.points2);
@@ -99,17 +133,17 @@ public class GameField extends AppCompatActivity{
             public void onClick(View v) {
                 Collections.shuffle(cards);
 
-                assinImages(cards.get(0), card1);
-                assinImages(cards.get(1), card2);
-                assinImages(cards.get(2), card3);
-                assinImages(cards.get(3), card4);
-                assinImages(cards.get(4), card5);
+                assinImages(cards.get(0), card1_player);
+                assinImages(cards.get(1), card2_player);
+                assinImages(cards.get(2), card3_player);
+                assinImages(cards.get(3), card4_player);
+                assinImages(cards.get(4), card5_player);
 
-                card1.setVisibility(View.VISIBLE);
-                card2.setVisibility(View.VISIBLE);
-                card3.setVisibility(View.VISIBLE);
-                card4.setVisibility(View.VISIBLE);
-                card5.setVisibility(View.VISIBLE);
+                card1_player.setVisibility(View.VISIBLE);
+                card2_player.setVisibility(View.VISIBLE);
+                card3_player.setVisibility(View.VISIBLE);
+                card4_player.setVisibility(View.VISIBLE);
+                card5_player.setVisibility(View.VISIBLE);
 
                 /*assinImages(cards.get(5), card_opponent1);
                 assinImages(cards.get(6), card_opponent2);

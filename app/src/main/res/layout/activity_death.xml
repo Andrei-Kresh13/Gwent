@@ -9,34 +9,85 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="209dp"
-        android:layout_height="172dp"
+        android:layout_width="117dp"
+        android:layout_height="113dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/carddeath" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="228dp"
-        android:layout_height="178dp"
+        android:layout_width="105dp"
+        android:layout_height="131dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/carddeath2" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="263dp"
-        android:layout_height="182dp"
+        android:layout_width="171dp"
+        android:layout_height="129dp"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/carddeath3" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="259dp"
-        android:layout_height="184dp"
+        android:layout_width="157dp"
+        android:layout_height="125dp"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/carddeath4" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="119dp"
+        android:layout_height="163dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cardundead4" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="110dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cardundead5" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="132dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/carduniversal1" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="76dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginLeft="432dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/carduniversal2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="159dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginBottom="8dp"
+        android:text="Universal cards"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

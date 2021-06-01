@@ -24,9 +24,9 @@
         android:id="@+id/points1"
         android:layout_width="71dp"
         android:layout_height="68dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="8dp"
         android:text="0"
         android:textSize="32dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,9 +37,9 @@
         android:id="@+id/points2"
         android:layout_width="65dp"
         android:layout_height="61dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginRight="244dp"
         android:text="0"
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,33 +53,33 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/name1"
         android:layout_width="89dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="300dp"
         android:text="TextView"
         android:textColor="#80228F"
         android:textColorHint="#9C27B0"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/points1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/name2"
-        android:layout_width="85dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="89dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:layout_marginBottom="300dp"
         android:text="TextView"
         android:textColor="#9C27B0"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/points2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
@@ -128,61 +128,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="644dp"
-        android:layout_height="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/card_opponent1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card_opponent2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card_opponent3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card_opponent4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card_opponent5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
