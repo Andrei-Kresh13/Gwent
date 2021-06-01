@@ -26,6 +26,8 @@ public class GameField extends AppCompatActivity{
     TextView points1,points2;
     private TextView nickname1, nickname2;
 
+    int score1 = 0,score2 = 0;
+
     ArrayList<Integer> cards;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +67,8 @@ public class GameField extends AppCompatActivity{
         card_opponent4 = findViewById(R.id.card_opponent4);
         card_opponent5 = findViewById(R.id.card_opponent5);
 
-        points1 = findViewById(R.id.points1);
-        points2 = findViewById(R.id.points2);
+        points1 =(TextView) findViewById(R.id.points1);
+        points2 =(TextView) findViewById(R.id.points2);
 
         cards = new ArrayList<>();
         cards.add(100);
