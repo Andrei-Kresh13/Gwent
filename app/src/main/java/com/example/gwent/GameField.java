@@ -41,33 +41,13 @@ public class GameField extends AppCompatActivity{
         Card card20=(new Card("Скелет-маг", 6));
         Card card21=(new Card("Гаргулья", 4));
 
-        ArrayList arrayList = new ArrayList();
-           /* arrayList.add(card1);
-            arrayList.add(card2);
-            arrayList.add(card3);
-            arrayList.add(card4);
-            arrayList.add(card5);
-            arrayList.add(card6);
-        arrayList.add(card7);
-        arrayList.add(card8);
-        arrayList.add(card9);
-        arrayList.add(card10);
-        arrayList.add(card11);
-        arrayList.add(card12);
-        arrayList.add(card13);
-        arrayList.add(card14);
-        arrayList.add(card15);
-        arrayList.add(card16);
-        arrayList.add(card17);
-        arrayList.add(card18);
-        arrayList.add(card19);
-        arrayList.add(card20);
-        arrayList.add(card21);*/
+        Card[] cards = new Card[]{card1, card2, card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13,card14,card15, card16,card17,card18,card19,card20,card21};
+
 
 
     int score1 = 0,score2 = 0;
 
-    ArrayList<Integer> cards;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,7 +84,7 @@ public class GameField extends AppCompatActivity{
         points1 =(TextView) findViewById(R.id.points1);
         points2 =(TextView) findViewById(R.id.points2);
 
-        cards = new ArrayList<>();
+        /*cards = new ArrayList<>();
         cards.add(100);
         cards.add(101);
         cards.add(102);
@@ -125,19 +105,19 @@ public class GameField extends AppCompatActivity{
         cards.add(301);
         cards.add(302);
         cards.add(303);
-        cards.add(304);
+        cards.add(304);*/
 
 
         start_game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Collections.shuffle(cards);
+                /*Collections.shuffle(cards);
 
                 assinImages(cards.get(0), card1_player);
                 assinImages(cards.get(1), card2_player);
                 assinImages(cards.get(2), card3_player);
                 assinImages(cards.get(3), card4_player);
-                assinImages(cards.get(4), card5_player);
+                assinImages(cards.get(4), card5_player);*/
 
                 card1_player.setVisibility(View.VISIBLE);
                 card2_player.setVisibility(View.VISIBLE);
