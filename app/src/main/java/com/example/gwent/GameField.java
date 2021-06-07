@@ -2,23 +2,73 @@ package com.example.gwent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import com.example.gwent.logic.Card;
+import com.example.gwent.logic.Game;
+import com.example.gwent.logic.Hand;
+import com.example.gwent.logic.Player;
+import com.example.gwent.logic.Rank;
+import com.example.gwent.logic.Suit;
 
-public class GameField extends AppCompatActivity{
-    ImageView card1_player, card2_player, card3_player, card4_player, card5_player,card_opponent1,card_opponent2,card_opponent3,card_opponent4,card_opponent5;
-    Button start_game;
-    TextView points1,points2;
+import java.util.ArrayList;
+
+public class GameField extends AppCompatActivity {
     private TextView nickname1, nickname2;
-    int score1 = 0,score2 = 0;
+    Hand hand1 = new Hand();
+    Hand hand2 = new Hand();
+
+    Player player1 = new Player("Player1", hand1);
+    Player player2 = new Player("Player2", hand2);
+
+    Game game = new Game(player1, player2);
+
+    private Suit player1DealtCardSuit;
+    private Rank player1DealtCardRank;
+
+    private int player1HandNewValue;
+    private ArrayList<Card> player1Hand;
+    private ArrayList<String> hand1Details;
+    private String player1CardDetails;
+    private String player1EachIcon;
+    private ArrayList<String> Player1AllIcons;
+
+    private Suit player2DealtCardSuit;
+    private Rank player2DealtCardRank;
+
+    private int player2HandNewValue;
+    private ArrayList<Card> player2Hand;
+    private ArrayList<String> hand2Details;
+    private String player2CardDetails;
+    private String player2EachIcon;
+    private ArrayList<String> Player2AllIcons;
+
+    ImageButton buttonUndead1;
+    ImageButton buttonUndead2;
+    ImageButton buttonHuman1;
+    ImageButton buttonHuman2;
+    ImageButton buttonWildness1;
+    ImageButton buttonWildness2;
+
+    TextView textPlayer1LatestCard;
+    TextView textPlayer2LatestCard;
+    TextView textResult;
+
+
+    ImageView player1FirstCardImage;
+    ImageView player1SecondCardImage;
+    ImageView player1ThirdCardImage;
+    ImageView player1FourthCardImage;
+
+    ImageView player2FirstCardImage;
+    ImageView player2SecondCardImage;
+    ImageView player2ThirdCardImage;
+    ImageView player2FourthCardImage;
 
 
     @Override
@@ -32,10 +82,8 @@ public class GameField extends AppCompatActivity{
         nickname2.setText(getIntent().getStringExtra("nickname2"));
 
 
-
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         View decorView = getWindow().getDecorView();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             decorView.setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                             | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -44,128 +92,106 @@ public class GameField extends AppCompatActivity{
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
-
-        start_game = findViewById(R.id.start_game);
-
-        card1_player = findViewById(R.id.card1);
-        card2_player = findViewById(R.id.card2);
-        card3_player = findViewById(R.id.card3);
-        card4_player = findViewById(R.id.card4);
-        card5_player = findViewById(R.id.card5);
+        player1FirstCardImage = (ImageView) findViewById(R.id.player1FirstCard);
+        player1SecondCardImage = (ImageView) findViewById(R.id.player1SecondCard);
+        player1ThirdCardImage = (ImageView) findViewById(R.id.player1ThirdCard);
+        player1FourthCardImage = (ImageView) findViewById(R.id.player1FourthCard);
 
 
-        points1 =(TextView) findViewById(R.id.points1);
-        points2 =(TextView) findViewById(R.id.points2);
+        player2FirstCardImage = (ImageView) findViewById(R.id.player2FirstCard);
+        player2SecondCardImage = (ImageView) findViewById(R.id.player2SecondCard);
+        player2ThirdCardImage = (ImageView) findViewById(R.id.player2ThirdCard);
+        player2FourthCardImage = (ImageView) findViewById(R.id.player2FourthCard);
 
-        /*cards = new ArrayList<>();
-        cards.add(100);
-        cards.add(101);
-        cards.add(102);
-        cards.add(103);
-        cards.add(104);
+        textPlayer1LatestCard = (TextView) findViewById(R.id.player1Choice);
+        textPlayer2LatestCard = (TextView) findViewById(R.id.player2Choice);
 
-
-        cards.add(200);
-        cards.add(201);
-        cards.add(202);
-        cards.add(203);
-        cards.add(204);
-        cards.add(205);
-        cards.add(206);
-        cards.add(207);
-
-        cards.add(300);
-        cards.add(301);
-        cards.add(302);
-        cards.add(303);
-        cards.add(304);*/
-
-
-        start_game.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*Collections.shuffle(cards);
-
-                assinImages(cards.get(0), card1_player);
-                assinImages(cards.get(1), card2_player);
-                assinImages(cards.get(2), card3_player);
-                assinImages(cards.get(3), card4_player);
-                assinImages(cards.get(4), card5_player);*/
-
-                card1_player.setVisibility(View.VISIBLE);
-                card2_player.setVisibility(View.VISIBLE);
-                card3_player.setVisibility(View.VISIBLE);
-                card4_player.setVisibility(View.VISIBLE);
-                card5_player.setVisibility(View.VISIBLE);
-
-                /*assinImages(cards.get(5), card_opponent1);
-                assinImages(cards.get(6), card_opponent2);
-                assinImages(cards.get(7), card_opponent3);
-                assinImages(cards.get(8), card_opponent4);
-                assinImages(cards.get(9), card_opponent5);
-
-                card_opponent1.setVisibility(View.VISIBLE);
-                card_opponent2.setVisibility(View.VISIBLE);
-                card_opponent3.setVisibility(View.VISIBLE);
-                card_opponent4.setVisibility(View.VISIBLE);
-                card_opponent5.setVisibility(View.VISIBLE);*/
-            }
-        });
+        textResult = (TextView) findViewById(R.id.textResult);
     }
 
-    public void assinImages(int card, ImageView image){
-        switch (card){
-            case 100:
-                image.setImageResource(R.drawable.cardhuman1);
-                break;
-            case 101:
-                image.setImageResource(R.drawable.cardhuman2);
-                break;
-            case 102:
-                image.setImageResource(R.drawable.cardhuman3);
-                break;
-            case 103:
-                image.setImageResource(R.drawable.cardhuman4);
-                break;
-            case 200:
-                image.setImageResource(R.drawable.cardwildness1);
-                break;
-            case 201:
-                image.setImageResource(R.drawable.cardwildness2);
-                break;
-            case 202:
-                image.setImageResource(R.drawable.cardwildness3);
-                break;
-            case 203:
-                image.setImageResource(R.drawable.cardwildness4);
-                break;
-            case 204:
-                image.setImageResource(R.drawable.cardwildness5);
-                break;
-            case 205:
-                image.setImageResource(R.drawable.cardwildness6);
-                break;
-            case 206:
-                image.setImageResource(R.drawable.cardwildness7);
-                break;
-            case 300:
-                image.setImageResource(R.drawable.carddeath);
-                break;
-            case 301:
-                image.setImageResource(R.drawable.carddeath2);
-                break;
-            case 302:
-                image.setImageResource(R.drawable.carddeath3);
-                break;
-            case 303:
-                image.setImageResource(R.drawable.carddeath4);
-                break;
-            case 304:
-                image.setImageResource(R.drawable.carddeath5);
-                break;
+
+    public void onPlayerClick(View view) {
+        hand1Details = new ArrayList<>();
+        Player1AllIcons = new ArrayList<>();
+
+        ArrayList<ImageView> player1CardIconImageViews = new ArrayList<>();
+        player1CardIconImageViews.add(player1FirstCardImage);
+        player1CardIconImageViews.add(player1SecondCardImage);
+        player1CardIconImageViews.add(player1ThirdCardImage);
+        player1CardIconImageViews.add(player1FourthCardImage);
+
+        int imageViewIndex = 0;
+
+        if(player1Hand != null && player1Hand.size() == 4) return;
+
+        player1Hand = game.dealPlayer1Card();
+        player1DealtCardRank = game.getplayer1DealtCardRank();
+        player1DealtCardSuit = game.getplayer1DealtCardSuit();
+
+        for (Card card:player1Hand) {
+            Suit suit = card.getSuit();
+            Rank rank = card.getRank();
+
+
+            player1CardDetails = rank + " of " + suit;
+            player1EachIcon = card.getCardIcon(player1CardDetails);
+
+            setCardImage(player1EachIcon, player1CardIconImageViews.get(imageViewIndex));
+            imageViewIndex++;
+
+            Player1AllIcons.add(player1EachIcon);
+            hand1Details.add(player1CardDetails);
         }
+        for (String player1Card: hand1Details) {
+            System.out.println("Player 1 card in hand is: "+player1Card);
+        }
+    }
+
+    public void onPlayer2Click(View view) {
+        hand2Details = new ArrayList<String>();
+        Player2AllIcons = new ArrayList<String>();
+
+        ArrayList<ImageView> player2CardIconImageViews = new ArrayList<>();
+        player2CardIconImageViews.add(player2FirstCardImage);
+        player2CardIconImageViews.add(player2SecondCardImage);
+        player2CardIconImageViews.add(player2ThirdCardImage);
+        player2CardIconImageViews.add(player2FourthCardImage);
+
+        int ImageIndex = 0;
+
+        if(player2Hand != null && player2Hand.size() == 4) return;
+
+        player2Hand = game.dealPlayer2Card();
+        player2DealtCardRank = game.getplayer2DealtCardRank();
+        player2DealtCardSuit = game.getplayer2DealtCardSuit();
+
+        for (Card card:player2Hand) {
+            Suit suit = card.getSuit();
+            Rank rank = card.getRank();
+
+            player2CardDetails = rank + " of " + suit;
+            player2EachIcon = card.getCardIcon(player2CardDetails);
+
+            setCardImage(player2EachIcon, player2CardIconImageViews.get(ImageIndex));
+            ImageIndex++;
+
+            Player2AllIcons.add(player2EachIcon);
+            hand2Details.add(player2CardDetails);
+        }
+    }
+
+    public void onResultButtonClick(View view) {
+        player1HandNewValue = game.getPlayer1HandNewValue();
+        player2HandNewValue = game.getPlayer2HandNewValue();
+        String outcome = game.getResult(player1HandNewValue, player2HandNewValue);
+        textResult.setText(outcome);
 
     }
 
-
+    public void setCardImage(String card, ImageView imageView) {
+        int image = getResources().getIdentifier(card, "drawable", getPackageName());
+        imageView.setImageResource(image);
+    }
 }
+
+

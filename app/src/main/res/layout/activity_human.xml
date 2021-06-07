@@ -13,7 +13,7 @@
         android:layout_height="151dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cardhuman1" />
+        app:srcCompat="@drawable/one_of_human" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -21,7 +21,7 @@
         android:layout_height="144dp"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cardhuman2" />
+        app:srcCompat="@drawable/two_of_human" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -29,7 +29,7 @@
         android:layout_height="141dp"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cardhuman3" />
+        app:srcCompat="@drawable/three_of_human" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -37,7 +37,7 @@
         android:layout_height="139dp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cardhuman4" />
+        app:srcCompat="@drawable/four_of_human" />
 
     <ImageView
         android:id="@+id/imageView21"
@@ -46,7 +46,7 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cardhuman5" />
+        app:srcCompat="@drawable/five_of_human" />
 
     <ImageView
         android:id="@+id/imageView22"
@@ -57,7 +57,7 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView21"
-        app:srcCompat="@drawable/cardhuman6" />
+        app:srcCompat="@drawable/six_of_human" />
 
     <ImageView
         android:id="@+id/imageView23"
@@ -67,6 +67,6 @@
         android:layout_marginLeft="356dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cardhuman7" />
+        app:srcCompat="@drawable/seven_of_human" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

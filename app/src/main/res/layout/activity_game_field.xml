@@ -9,7 +9,7 @@
     tools:context=".GameField">
 
     <ImageView
-        android:id="@+id/gamefield"
+        android:id="@+id/imageView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,51 +17,112 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/gamefield" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/game" />
 
     <TextView
-        android:id="@+id/points1"
-        android:layout_width="71dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginLeft="240dp"
-        android:layout_marginTop="8dp"
-        android:text="0"
-        android:textSize="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="0" />
-
-    <TextView
-        android:id="@+id/points2"
-        android:layout_width="65dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginRight="244dp"
-        android:text="0"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/start_game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Начать игру"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        android:id="@+id/player1Choice"
+        android:layout_width="181dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/player2Choice"
+        android:layout_width="216dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="337dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/player2FirstCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageView
+            android:id="@+id/player2SecondCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageView
+            android:id="@+id/player2ThirdCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageView
+            android:id="@+id/player2FourthCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="331dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257">
+
+        <ImageView
+            android:id="@+id/player1FirstCard"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageView
+            android:id="@+id/player1SecondCard"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageView
+            android:id="@+id/player1ThirdCard"
+            android:layout_width="74dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageView
+            android:id="@+id/player1FourthCard"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/card_back" />
+
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/name1"
-        android:layout_width="89dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginBottom="300dp"
+        android:layout_width="85dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
+        android:layout_marginBottom="316dp"
         android:text="TextView"
         android:textColor="#80228F"
         android:textColorHint="#9C27B0"
@@ -69,65 +130,66 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/buttonPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="128dp"
+        android:onClick="onPlayerClick"
+        android:text="Игрок1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="128dp"
+        android:onClick="onPlayer2Click"
+        android:text="игрок2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="308dp"
+        android:layout_marginRight="308dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onResultButtonClick"
+        android:text="Результат"
+        app:layout_constraintBottom_toTopOf="@+id/textResult"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/name2"
-        android:layout_width="89dp"
-        android:layout_height="58dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:layout_marginBottom="300dp"
+        android:layout_width="83dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:layout_marginBottom="316dp"
         android:text="TextView"
         android:textColor="#9C27B0"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="637dp"
-        android:layout_height="90dp"
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="298dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginRight="204dp"
+        android:layout_marginBottom="4dp"
+        android:shadowColor="#009688"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/card1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-
-        <ImageView
-            android:id="@+id/card5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/card_back" />
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

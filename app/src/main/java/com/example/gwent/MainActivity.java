@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-import com.example.gwent.Colods.Deck;
+import com.example.gwent.Colods.Colods;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.button2:
-            Intent intent1 = new Intent(this, Deck.class);
+            Intent intent1 = new Intent(this, Colods.class);
             startActivity(intent1);
             break;
         }
