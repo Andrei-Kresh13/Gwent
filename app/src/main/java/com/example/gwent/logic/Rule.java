@@ -42,7 +42,6 @@ public class Rule {
             case "SEVEN":
                 value = 7;
                 break;
-
         }
         return value;
     }

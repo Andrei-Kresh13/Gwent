@@ -14,7 +14,7 @@ import android.widget.Button;
 import com.example.gwent.Colods.Colods;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @RequiresApi(api = Build.VERSION_CODES.O)
+    //@RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -33,23 +33,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
-    Button button = findViewById(R.id.button);
+    Button button = findViewById(R.id.game);
         button.setOnClickListener(this);
-        Button button2 = findViewById(R.id.button2);
+        Button button2 = findViewById(R.id.colods);
         button2.setOnClickListener(this);
+        Button button1 = findViewById(R.id.fastGame);
+        button1.setOnClickListener(this);
     }
     @Override
     public void onClick(View view) {
         Button btn = (Button) view;
         switch (btn.getId()) {
-            case R.id.button:
+            case R.id.game:
                 Intent intent = new Intent(this, NickNames.class);
                 startActivity(intent);
                 break;
-            case R.id.button2:
-            Intent intent1 = new Intent(this, Colods.class);
-            startActivity(intent1);
-            break;
+            case R.id.fastGame:
+                Intent intent2 = new Intent(this, FastGame.class);
+                startActivity(intent2);
+                break;
+            case R.id.colods:
+                 Intent intent1 = new Intent(this, Colods.class);
+                 startActivity(intent1);
+                 break;
+
         }
     }
 

@@ -9,20 +9,20 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/game"
         android:layout_width="94dp"
         android:layout_height="72dp"
         android:onClick="onClick"
         android:text="Играть"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.184" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/colods"
         android:layout_width="116dp"
         android:layout_height="64dp"
         android:text="Колоды"
@@ -30,6 +30,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintTop_toBottomOf="@+id/game"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <Button
+        android:id="@+id/fastGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Быстрая игра"
+        app:layout_constraintBottom_toTopOf="@+id/colods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game" />
 </androidx.constraintlayout.widget.ConstraintLayout>

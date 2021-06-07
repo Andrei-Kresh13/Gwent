@@ -8,21 +8,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.Gwent">
-        <activity android:name=".NickNames"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".Colods.Human"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".Colods.Undead"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".Colods.Wildness"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".Colods.Colods"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".GameField"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".MainActivity"
+        <activity android:name=".FastGame"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".NickNames"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Colods.Human"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Colods.Undead"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Colods.Wildness"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Colods.Colods"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GameField"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,8 +18,7 @@ import com.example.gwent.logic.Suit;
 
 import java.util.ArrayList;
 
-public class GameField extends AppCompatActivity {
-    private TextView nickname1, nickname2;
+public class FastGame extends AppCompatActivity {
     Hand hand1 = new Hand();
     Hand hand2 = new Hand();
 
@@ -48,32 +47,18 @@ public class GameField extends AppCompatActivity {
     private String player2EachIcon;
     private ArrayList<String> Player2AllIcons;
 
-    TextView textPlayer1LatestCard;
-    TextView textPlayer2LatestCard;
     TextView textResult;
 
+    ImageView player1CardImage;
+    ImageView player2CardImage;
 
-    ImageView player1FirstCardImage;
-    ImageView player1SecondCardImage;
-    ImageView player1ThirdCardImage;
-    ImageView player1FourthCardImage;
-
-    ImageView player2FirstCardImage;
-    ImageView player2SecondCardImage;
-    ImageView player2ThirdCardImage;
-    ImageView player2FourthCardImage;
-
+    Button btnFirst;
+    Button btnSecond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_field);
-
-        nickname1 = findViewById(R.id.name1);
-        nickname2 = findViewById(R.id.name2);
-        nickname1.setText(getIntent().getStringExtra("nickname1"));
-        nickname2.setText(getIntent().getStringExtra("nickname2"));
-
+        setContentView(R.layout.activity_fast_game);
 
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -85,37 +70,26 @@ public class GameField extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
-        player1FirstCardImage = (ImageView) findViewById(R.id.player1FirstCard);
-        player1SecondCardImage = (ImageView) findViewById(R.id.player1SecondCard);
-        player1ThirdCardImage = (ImageView) findViewById(R.id.player1ThirdCard);
-        player1FourthCardImage = (ImageView) findViewById(R.id.player1FourthCard);
 
+        player1CardImage = findViewById(R.id.player1Card);
+        player2CardImage = findViewById(R.id.player2Card);
 
-        player2FirstCardImage = (ImageView) findViewById(R.id.player2FirstCard);
-        player2SecondCardImage = (ImageView) findViewById(R.id.player2SecondCard);
-        player2ThirdCardImage = (ImageView) findViewById(R.id.player2ThirdCard);
-        player2FourthCardImage = (ImageView) findViewById(R.id.player2FourthCard);
+        btnFirst = findViewById(R.id.firstPlayer);
+        btnSecond = findViewById(R.id.secondPlayer);
 
-        textPlayer1LatestCard = (TextView) findViewById(R.id.player1Choice);
-        textPlayer2LatestCard = (TextView) findViewById(R.id.player2Choice);
-
-        textResult = (TextView) findViewById(R.id.textResult);
+        textResult = findViewById(R.id.textResult);
     }
 
-
-    public void onPlayerClick(View view) {
+    public void onFirstPlayerClick(View view){
         hand1Details = new ArrayList<>();
         Player1AllIcons = new ArrayList<>();
 
         ArrayList<ImageView> player1CardIconImageViews = new ArrayList<>();
-        player1CardIconImageViews.add(player1FirstCardImage);
-        player1CardIconImageViews.add(player1SecondCardImage);
-        player1CardIconImageViews.add(player1ThirdCardImage);
-        player1CardIconImageViews.add(player1FourthCardImage);
+        player1CardIconImageViews.add(player1CardImage);
 
         int imageViewIndex = 0;
 
-        if(player1Hand != null && player1Hand.size() == 4) return;
+        if(player1Hand != null && player1Hand.size() == 1) return;
 
         player1Hand = game.dealPlayer1Card();
         player1DealtCardRank = game.getplayer1DealtCardRank();
@@ -138,18 +112,15 @@ public class GameField extends AppCompatActivity {
         for (String player1Card: hand1Details) {
             System.out.println("Player 1 card in hand is: "+player1Card);
         }
+
     }
 
-    public void onPlayer2Click(View view) {
+    public void onSecondPlayerClick(View view){
         hand2Details = new ArrayList<String>();
         Player2AllIcons = new ArrayList<String>();
 
         ArrayList<ImageView> player2CardIconImageViews = new ArrayList<>();
-        player2CardIconImageViews.add(player2FirstCardImage);
-        player2CardIconImageViews.add(player2SecondCardImage);
-        player2CardIconImageViews.add(player2ThirdCardImage);
-        player2CardIconImageViews.add(player2FourthCardImage);
-
+        player2CardIconImageViews.add(player2CardImage);
         int ImageIndex = 0;
 
         if(player2Hand != null && player2Hand.size() == 4) return;
@@ -173,12 +144,11 @@ public class GameField extends AppCompatActivity {
         }
     }
 
-    public void onResultButtonClick(View view) {
+    public void onResultClick(View view){
         player1HandNewValue = game.getPlayer1HandNewValue();
         player2HandNewValue = game.getPlayer2HandNewValue();
         String outcome = game.getResult(player1HandNewValue, player2HandNewValue);
         textResult.setText(outcome);
-
     }
 
     public void setCardImage(String card, ImageView imageView) {
@@ -186,5 +156,3 @@ public class GameField extends AppCompatActivity {
         imageView.setImageResource(image);
     }
 }
-
-
