@@ -6,8 +6,6 @@ public class Rule {
     private String rank;
     private int value;
 
-
-
     public Rule() {
 
     }
@@ -55,5 +53,4 @@ public class Rule {
             return "Game Drawn";
         }
     }
-
 }

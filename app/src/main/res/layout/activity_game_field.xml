@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/c_layout"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:screenOrientation="landscape"
     tools:context=".GameField">
@@ -20,57 +20,41 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/game" />
 
-    <TextView
-        android:id="@+id/player1Choice"
-        android:layout_width="181dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/player2Choice"
-        android:layout_width="216dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <LinearLayout
-        android:layout_width="337dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="331dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/player2FirstCard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/player2SecondCard"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/player2ThirdCard"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/player2FourthCard"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
     </LinearLayout>
@@ -88,29 +72,29 @@
 
         <ImageView
             android:id="@+id/player1FirstCard"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
+            android:layout_width="75dp"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/player1SecondCard"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
+            android:layout_width="75dp"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/player1ThirdCard"
-            android:layout_width="74dp"
-            android:layout_height="match_parent"
+            android:layout_width="75dp"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/player1FourthCard"
-            android:layout_width="71dp"
-            android:layout_height="match_parent"
+            android:layout_width="75dp"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/card_back" />
 
@@ -118,13 +102,13 @@
 
     <TextView
         android:id="@+id/name1"
-        android:layout_width="85dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginLeft="184dp"
-        android:layout_marginBottom="316dp"
+        android:layout_width="182dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginBottom="304dp"
         android:text="TextView"
-        android:textColor="#80228F"
+        android:textColor="@color/white"
         android:textColorHint="#9C27B0"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -134,11 +118,12 @@
         android:id="@+id/buttonPlayer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="108dp"
         android:onClick="onPlayerClick"
         android:text="Игрок1"
+        app:backgroundTint="#333333"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -146,11 +131,12 @@
         android:id="@+id/buttonPlayer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="108dp"
         android:onClick="onPlayer2Click"
         android:text="игрок2"
+        app:backgroundTint="#333333"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -158,36 +144,59 @@
         android:id="@+id/buttonResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="308dp"
-        android:layout_marginRight="308dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginRight="296dp"
+        android:layout_marginBottom="12dp"
         android:onClick="onResultButtonClick"
         android:text="Результат"
+        app:backgroundTint="#1E1E1E"
         app:layout_constraintBottom_toTopOf="@+id/textResult"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/name2"
-        android:layout_width="83dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:layout_marginBottom="316dp"
+        android:layout_width="171dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginRight="172dp"
+        android:layout_marginBottom="324dp"
         android:text="TextView"
-        android:textColor="#9C27B0"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/ifPlayer1"
+        android:layout_width="269dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="48dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ifPlayer2"
+        android:layout_width="270dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="44dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
         android:id="@+id/textResult"
-        android:layout_width="298dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginRight="204dp"
+        android:layout_width="277dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginRight="172dp"
         android:layout_marginBottom="4dp"
         android:shadowColor="#009688"
-        android:textColor="#9C27B0"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

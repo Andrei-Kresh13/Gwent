@@ -10,36 +10,46 @@
 
     <Button
         android:id="@+id/game"
-        android:layout_width="94dp"
+        android:layout_width="189dp"
         android:layout_height="72dp"
         android:onClick="onClick"
+        android:shadowColor="#3C3F41"
         android:text="Играть"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#852121"
+        app:backgroundTint="#636363"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintVertical_bias="0.274"
+        app:rippleColor="#FFFFFF" />
 
     <Button
         android:id="@+id/colods"
-        android:layout_width="116dp"
+        android:layout_width="189dp"
         android:layout_height="64dp"
         android:text="Колоды"
+        app:backgroundTint="#403131"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/game"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.417" />
 
     <Button
         android:id="@+id/fastGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="189dp"
+        android:layout_height="51dp"
         android:text="Быстрая игра"
+        app:backgroundTint="#222222"
+        app:iconTint="#333333"
         app:layout_constraintBottom_toTopOf="@+id/colods"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game" />
+        app:layout_constraintTop_toBottomOf="@+id/game"
+        app:layout_constraintVertical_bias="0.375" />
 </androidx.constraintlayout.widget.ConstraintLayout>

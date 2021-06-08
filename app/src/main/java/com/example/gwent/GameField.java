@@ -20,9 +20,9 @@ import java.util.ArrayList;
 
 public class GameField extends AppCompatActivity {
     private TextView nickname1, nickname2;
+    private TextView if1, if2;
     Hand hand1 = new Hand();
     Hand hand2 = new Hand();
-
     Player player1 = new Player("Player1", hand1);
     Player player2 = new Player("Player2", hand2);
 
@@ -74,6 +74,11 @@ public class GameField extends AppCompatActivity {
         nickname1.setText(getIntent().getStringExtra("nickname1"));
         nickname2.setText(getIntent().getStringExtra("nickname2"));
 
+        if1 = findViewById(R.id.ifPlayer1);
+        if2 = findViewById(R.id.ifPlayer2);
+        if1.setText(getIntent().getStringExtra("if1"));
+        if2.setText(getIntent().getStringExtra("if2"));
+
 
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -95,9 +100,6 @@ public class GameField extends AppCompatActivity {
         player2SecondCardImage = (ImageView) findViewById(R.id.player2SecondCard);
         player2ThirdCardImage = (ImageView) findViewById(R.id.player2ThirdCard);
         player2FourthCardImage = (ImageView) findViewById(R.id.player2FourthCard);
-
-        textPlayer1LatestCard = (TextView) findViewById(R.id.player1Choice);
-        textPlayer2LatestCard = (TextView) findViewById(R.id.player2Choice);
 
         textResult = (TextView) findViewById(R.id.textResult);
     }
@@ -136,7 +138,7 @@ public class GameField extends AppCompatActivity {
             hand1Details.add(player1CardDetails);
         }
         for (String player1Card: hand1Details) {
-            System.out.println("Player 1 card in hand is: "+player1Card);
+            System.out.println("Player 1 card in hand is: "+ player1Card);
         }
     }
 

@@ -77,7 +77,7 @@ public class FastGame extends AppCompatActivity {
         btnFirst = findViewById(R.id.firstPlayer);
         btnSecond = findViewById(R.id.secondPlayer);
 
-        textResult = findViewById(R.id.textResult);
+        textResult = findViewById(R.id.textResultOfFastGame);
     }
 
     public void onFirstPlayerClick(View view){
@@ -116,14 +116,14 @@ public class FastGame extends AppCompatActivity {
     }
 
     public void onSecondPlayerClick(View view){
-        hand2Details = new ArrayList<String>();
-        Player2AllIcons = new ArrayList<String>();
+        hand2Details = new ArrayList<>();
+        Player2AllIcons = new ArrayList<>();
 
         ArrayList<ImageView> player2CardIconImageViews = new ArrayList<>();
         player2CardIconImageViews.add(player2CardImage);
         int ImageIndex = 0;
 
-        if(player2Hand != null && player2Hand.size() == 4) return;
+        if(player2Hand != null && player2Hand.size() == 1) return;
 
         player2Hand = game.dealPlayer2Card();
         player2DealtCardRank = game.getplayer2DealtCardRank();

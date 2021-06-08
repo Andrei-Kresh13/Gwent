@@ -121,14 +121,26 @@ public class Game {
         player1HandNewValue = getPlayer1HandNewValue();
         player2HandNewValue = getPlayer2HandNewValue();
         result = rule.getResult(player1HandNewValue, player2HandNewValue);
-        if (result.equals("Player")) {
-            resultMessage = player1.getName() + " победил!!!";
+        if (result.equals("Player1")) {
+            resultMessage = player1.getName() + " победитель!!!";
         } else if (result.equals("Player2")) {
-            resultMessage = player2.getName() + " победил!!!";
+            resultMessage = player2.getName() + " победитель!!!";
         } else {
             resultMessage = "Ничья!!!";
         }
         return resultMessage;
     }
-
+    public String getResultWithName(){
+        player1HandNewValue = getPlayer1HandNewValue();
+        player2HandNewValue = getPlayer2HandNewValue();
+        result = rule.getResult(player1HandNewValue, player2HandNewValue);
+        if (result.equals("Player1")) {
+            resultMessage = player1.getName() + " is the winner!!!";
+        } else if (result.equals("Player2")) {
+            resultMessage = player2.getName() + " is the winner!!!";
+        } else {
+            resultMessage = "It's a draw!!!";
+        }
+        return resultMessage;
+    }
 }

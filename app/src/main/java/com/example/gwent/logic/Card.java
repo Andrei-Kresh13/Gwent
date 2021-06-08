@@ -98,4 +98,5 @@ public class Card {
 
         return this.cardIcon;
     }
+
 }

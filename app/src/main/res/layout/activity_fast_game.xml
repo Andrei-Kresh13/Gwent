@@ -66,10 +66,10 @@
 
     <TextView
         android:id="@+id/textResultOfFastGame"
-        android:layout_width="127dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginLeft="288dp"
+        android:layout_width="288dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

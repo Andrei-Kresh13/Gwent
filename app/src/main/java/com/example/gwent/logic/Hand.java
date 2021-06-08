@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Hand {
 
-
     private ArrayList<Card> cardsInHand;
     private Suit suit;
     private Rank rank;
@@ -51,5 +50,6 @@ public class Hand {
     public ArrayList<Card> getCardsInHand() {
         return this.cardsInHand;
     }
+
 
 }

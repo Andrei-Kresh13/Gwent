@@ -23,11 +23,12 @@
         android:id="@+id/start"
         android:layout_width="109dp"
         android:layout_height="58dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginLeft="264dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginLeft="304dp"
+        android:layout_marginBottom="28dp"
         android:onClick="onClick"
         android:text="Играть"
+        app:backgroundTint="#5D3085"
         app:layout_constraintBottom_toBottomOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -35,30 +36,82 @@
         android:id="@+id/nickname1"
         android:layout_width="205dp"
         android:layout_height="95dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        android:textColor="#9C27B0"
+        android:text="player1"
+        android:textColor="#E9B8F1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nickname2"
-        android:layout_width="196dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="152dp"
+        android:layout_width="199dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        android:textColor="#9C27B0"
+        android:text="player2"
+        android:textColor="#F1B6FB"
         android:textColorHint="#00BCD4"
         android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textIfPlayer1"
+        android:layout_width="182dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="8dp"
+        android:text="Введите условие:"
+        android:textColor="#EDEDED"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname1" />
+
+    <EditText
+        android:id="@+id/setIfPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="условие 1"
+        android:textColor="#FFF9F9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIfPlayer1" />
+
+    <TextView
+        android:id="@+id/textIfPlayer2"
+        android:layout_width="189dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Введите условие:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname2" />
+
+    <EditText
+        android:id="@+id/setIfPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="условие 2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
