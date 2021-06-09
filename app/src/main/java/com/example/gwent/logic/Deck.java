@@ -23,9 +23,9 @@ public class Deck {
         }
     }
 
-    public Card dealRandomCard() {
-        int index = random.nextInt(deck.size());
-        Card card = deck.get(index);
+    public Card generateRandomCard() {
+        int num = random.nextInt(deck.size());
+        Card card = deck.get(num);
         return card;
     }
 

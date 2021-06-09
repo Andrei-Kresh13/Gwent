@@ -5,7 +5,7 @@ public class Card {
 
     private int value;
     private String cardDetails;
-    private String cardIcon;
+    private String cardImage;
 
     private Rule rule;
     private Suit suit;
@@ -18,7 +18,7 @@ public class Card {
         this.value = value;
         this.suit = suit;
         this.cardDetails = cardDetails;
-        this.cardIcon = cardIcon;
+        this.cardImage = cardImage;
     }
 
     public Rank getRank() {
@@ -40,63 +40,63 @@ public class Card {
 
 
 
-    public String getCardIcon(String cardDetails) {
+    public String getCardImage(String cardDetails) {
 
         // Wildness
 
         if (cardDetails.equals("ONE of WILDNESS")) {
-            cardIcon = "ace_of_wildness";
+            cardImage = "one_of_wildness";
         } else if (cardDetails.equals("TWO of WILDNESS")) {
-            cardIcon = "two_of_wildness";
+            cardImage = "two_of_wildness";
         } else if (cardDetails.equals("THREE of WILDNESS")) {
-            cardIcon = "three_of_wildness";
+            cardImage = "three_of_wildness";
         } else if (cardDetails.equals("FOUR of WILDNESS")) {
-            cardIcon = "four_of_wildness";
+            cardImage = "four_of_wildness";
         } else if (cardDetails.equals("FIVE of WILDNESS")) {
-            cardIcon = "five_of_wildness";
+            cardImage = "five_of_wildness";
         } else if (cardDetails.equals("SIX of WILDNESS")) {
-            cardIcon = "six_of_wildness";
+            cardImage = "six_of_wildness";
         } else if (cardDetails.equals("SEVEN of WILDNESS")) {
-            cardIcon = "seven_of_wildness";
+            cardImage = "seven_of_wildness";
         }
 
         // Undead
 
         if (cardDetails.equals("ONE of UNDEAD")) {
-            cardIcon = "one_of_undead";
+            cardImage = "one_of_undead";
         } else if (cardDetails.equals("TWO of UNDEAD")) {
-            cardIcon = "two_of_undead";
+            cardImage = "two_of_undead";
         } else if (cardDetails.equals("THREE of UNDEAD")) {
-            cardIcon = "three_of_undead";
+            cardImage = "three_of_undead";
         } else if (cardDetails.equals("FOUR of UNDEAD")) {
-            cardIcon = "four_of_undead";
+            cardImage = "four_of_undead";
         } else if (cardDetails.equals("FIVE of UNDEAD")) {
-            cardIcon = "five_of_undead";
+            cardImage = "five_of_undead";
         } else if (cardDetails.equals("SIX of UNDEAD")) {
-            cardIcon = "six_of_undead";
+            cardImage = "six_of_undead";
         } else if (cardDetails.equals("SEVEN of UNDEAD")) {
-            cardIcon = "seven_of_undead";
+            cardImage = "seven_of_undead";
         }
 
         // Human
 
         if (cardDetails.equals("ONE of HUMAN")) {
-            cardIcon = "one_of_human";
+            cardImage = "one_of_human";
         } else if (cardDetails.equals("TWO of HUMAN")) {
-            cardIcon = "two_of_human";
+            cardImage = "two_of_human";
         } else if (cardDetails.equals("THREE of HUMAN")) {
-            cardIcon = "three_of_human";
+            cardImage = "three_of_human";
         } else if (cardDetails.equals("FOUR of HUMAN")) {
-            cardIcon = "four_of_human";
+            cardImage = "four_of_human";
         } else if (cardDetails.equals("FIVE of HUMAN")) {
-            cardIcon = "five_of_human";
+            cardImage = "five_of_human";
         } else if (cardDetails.equals("SIX of HUMAN")) {
-            cardIcon = "six_of_human";
+            cardImage = "six_of_human";
         } else if (cardDetails.equals("SEVEN of HUMAN")) {
-            cardIcon = "seven_of_human";
+            cardImage = "seven_of_human";
         }
 
-        return this.cardIcon;
+        return this.cardImage;
     }
 
 }

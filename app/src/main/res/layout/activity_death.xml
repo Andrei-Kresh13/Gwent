@@ -4,65 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2E2E"
     android:screenOrientation="landscape"
     tools:context=".Colods.Undead">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="117dp"
-        android:layout_height="113dp"
+        android:layout_width="150dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/one_of_undead" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="103dp"
-        android:layout_height="112dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/two_of_undead" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="151dp"
-        android:layout_height="112dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        android:layout_width="157dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="388dp"
+        android:layout_marginLeft="388dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/three_of_undead" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="132dp"
-        android:layout_height="112dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        android:layout_width="159dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="544dp"
+        android:layout_marginLeft="544dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/four_of_undead" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="119dp"
-        android:layout_height="163dp"
+        android:layout_width="125dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/five_of_undead" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="112dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
+        android:layout_width="115dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/six_of_undead" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="96dp"
-        android:layout_height="159dp"
+        android:layout_width="119dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="484dp"
+        android:layout_marginLeft="484dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/seven_of_undead" />
 
 

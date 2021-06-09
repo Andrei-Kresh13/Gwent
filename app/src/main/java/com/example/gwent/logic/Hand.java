@@ -4,35 +4,35 @@ import java.util.ArrayList;
 
 public class Hand {
 
-    private ArrayList<Card> cardsInHand;
+    private ArrayList<Card> cardsHand;
     private Suit suit;
     private Rank rank;
     private int cardValue;
     private int handValue;
-    private int handSize;
+    private int handLenght;
 
     Deck deck = new Deck();
 
     public Hand() {
-        this.cardsInHand = new ArrayList<Card>();
+        this.cardsHand = new ArrayList<Card>();
         this.suit = suit;
         this.rank = rank;
         this.cardValue  = cardValue;
         this.handValue  = handValue;
-        this.handSize = handSize;
+        this.handLenght = handLenght;
     }
 
     public ArrayList<Card> buildHand() {
         this.handValue = 0;
-        Card newCard = deck.dealRandomCard();
-        this.cardsInHand.add(newCard);
-        for (Card card:cardsInHand) {
+        Card newCard = deck.generateRandomCard();
+        this.cardsHand.add(newCard);
+        for (Card card: cardsHand) {
             this.suit = card.getSuit();
             this.rank = card.getRank();
             this.cardValue = card.getValue(rank);
             this.handValue = this.handValue + this.cardValue;
         }
-        return cardsInHand;
+        return cardsHand;
     }
 
     public Suit getCardSuit() {
@@ -47,8 +47,8 @@ public class Hand {
         return this.cardValue;
     }
 
-    public ArrayList<Card> getCardsInHand() {
-        return this.cardsInHand;
+    public ArrayList<Card> getCardsHand() {
+        return this.cardsHand;
     }
 
 

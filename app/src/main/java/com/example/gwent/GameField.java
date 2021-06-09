@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,29 +27,29 @@ public class GameField extends AppCompatActivity {
 
     Game game = new Game(player1, player2);
 
-    private Suit player1DealtCardSuit;
-    private Rank player1DealtCardRank;
+    private Suit player1Dealtcard;
+    private Rank player1Dealtcardrank;
 
-    private int player1HandNewValue;
+    private int player1Handnewvalue;
     private ArrayList<Card> player1Hand;
-    private ArrayList<String> hand1Details;
-    private String player1CardDetails;
-    private String player1EachIcon;
-    private ArrayList<String> Player1AllIcons;
+    private ArrayList<String> hand1Det;
+    private String player1CardsDet;
+    private String player1EveryImage;
+    private ArrayList<String> Player1AllImages;
 
     private Suit player2DealtCardSuit;
     private Rank player2DealtCardRank;
 
-    private int player2HandNewValue;
+    private int player2Handnewvalue;
     private ArrayList<Card> player2Hand;
-    private ArrayList<String> hand2Details;
-    private String player2CardDetails;
-    private String player2EachIcon;
-    private ArrayList<String> Player2AllIcons;
+    private ArrayList<String> hands2details;
+    private String player2cardsdetails;
+    private String player2EveryImages;
+    private ArrayList<String> Player2AllImages;
 
     TextView textPlayer1LatestCard;
     TextView textPlayer2LatestCard;
-    TextView textResult;
+    TextView textresultofgame;
 
 
     ImageView player1FirstCardImage;
@@ -101,62 +100,62 @@ public class GameField extends AppCompatActivity {
         player2ThirdCardImage = (ImageView) findViewById(R.id.player2ThirdCard);
         player2FourthCardImage = (ImageView) findViewById(R.id.player2FourthCard);
 
-        textResult = (TextView) findViewById(R.id.textResult);
+        textresultofgame = (TextView) findViewById(R.id.textResult);
     }
 
 
-    public void onPlayerClick(View view) {
-        hand1Details = new ArrayList<>();
-        Player1AllIcons = new ArrayList<>();
+    public void onPlayerclick(View view) {
+        hand1Det = new ArrayList<>();
+        Player1AllImages = new ArrayList<>();
 
-        ArrayList<ImageView> player1CardIconImageViews = new ArrayList<>();
-        player1CardIconImageViews.add(player1FirstCardImage);
-        player1CardIconImageViews.add(player1SecondCardImage);
-        player1CardIconImageViews.add(player1ThirdCardImage);
-        player1CardIconImageViews.add(player1FourthCardImage);
+        ArrayList<ImageView> player1CardImages = new ArrayList<>();
+        player1CardImages.add(player1FirstCardImage);
+        player1CardImages.add(player1SecondCardImage);
+        player1CardImages.add(player1ThirdCardImage);
+        player1CardImages.add(player1FourthCardImage);
 
-        int imageViewIndex = 0;
+        int index = 0;
 
         if(player1Hand != null && player1Hand.size() == 4) return;
 
-        player1Hand = game.dealPlayer1Card();
-        player1DealtCardRank = game.getplayer1DealtCardRank();
-        player1DealtCardSuit = game.getplayer1DealtCardSuit();
+        player1Hand = game.generatePlayer1Card();
+        player1Dealtcardrank = game.getplayer1DealtCardRank();
+        player1Dealtcard = game.getplayer1DealtCardSuit();
 
         for (Card card:player1Hand) {
             Suit suit = card.getSuit();
             Rank rank = card.getRank();
 
 
-            player1CardDetails = rank + " of " + suit;
-            player1EachIcon = card.getCardIcon(player1CardDetails);
+            player1CardsDet = rank + " of " + suit;
+            player1EveryImage = card.getCardImage(player1CardsDet);
 
-            setCardImage(player1EachIcon, player1CardIconImageViews.get(imageViewIndex));
-            imageViewIndex++;
+            setcardimage(player1EveryImage, player1CardImages.get(index));
+            index++;
 
-            Player1AllIcons.add(player1EachIcon);
-            hand1Details.add(player1CardDetails);
+            Player1AllImages.add(player1EveryImage);
+            hand1Det.add(player1CardsDet);
         }
-        for (String player1Card: hand1Details) {
+        for (String player1Card: hand1Det) {
             System.out.println("Player 1 card in hand is: "+ player1Card);
         }
     }
 
     public void onPlayer2Click(View view) {
-        hand2Details = new ArrayList<String>();
-        Player2AllIcons = new ArrayList<String>();
+        hands2details = new ArrayList<String>();
+        Player2AllImages = new ArrayList<String>();
 
-        ArrayList<ImageView> player2CardIconImageViews = new ArrayList<>();
-        player2CardIconImageViews.add(player2FirstCardImage);
-        player2CardIconImageViews.add(player2SecondCardImage);
-        player2CardIconImageViews.add(player2ThirdCardImage);
-        player2CardIconImageViews.add(player2FourthCardImage);
+        ArrayList<ImageView> player2CardImages = new ArrayList<>();
+        player2CardImages.add(player2FirstCardImage);
+        player2CardImages.add(player2SecondCardImage);
+        player2CardImages.add(player2ThirdCardImage);
+        player2CardImages.add(player2FourthCardImage);
 
-        int ImageIndex = 0;
+        int index = 0;
 
         if(player2Hand != null && player2Hand.size() == 4) return;
 
-        player2Hand = game.dealPlayer2Card();
+        player2Hand = game.generatePlayer2Card();
         player2DealtCardRank = game.getplayer2DealtCardRank();
         player2DealtCardSuit = game.getplayer2DealtCardSuit();
 
@@ -164,26 +163,26 @@ public class GameField extends AppCompatActivity {
             Suit suit = card.getSuit();
             Rank rank = card.getRank();
 
-            player2CardDetails = rank + " of " + suit;
-            player2EachIcon = card.getCardIcon(player2CardDetails);
+            player2cardsdetails = rank + " of " + suit;
+            player2EveryImages = card.getCardImage(player2cardsdetails);
 
-            setCardImage(player2EachIcon, player2CardIconImageViews.get(ImageIndex));
-            ImageIndex++;
+            setcardimage(player2EveryImages, player2CardImages.get(index));
+            index++;
 
-            Player2AllIcons.add(player2EachIcon);
-            hand2Details.add(player2CardDetails);
+            Player2AllImages.add(player2EveryImages);
+            hands2details.add(player2cardsdetails);
         }
     }
 
-    public void onResultButtonClick(View view) {
-        player1HandNewValue = game.getPlayer1HandNewValue();
-        player2HandNewValue = game.getPlayer2HandNewValue();
-        String outcome = game.getResult(player1HandNewValue, player2HandNewValue);
-        textResult.setText(outcome);
+    public void onResultClick(View view) {
+        player1Handnewvalue = game.getPlayer1HandValue();
+        player2Handnewvalue = game.getPlayer2HandValue();
+        String result = game.getResult(player1Handnewvalue, player2Handnewvalue);
+        textresultofgame.setText(result);
 
     }
 
-    public void setCardImage(String card, ImageView imageView) {
+    public void setcardimage(String card, ImageView imageView) {
         int image = getResources().getIdentifier(card, "drawable", getPackageName());
         imageView.setImageResource(image);
     }

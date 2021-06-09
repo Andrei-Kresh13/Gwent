@@ -91,7 +91,7 @@ public class FastGame extends AppCompatActivity {
 
         if(player1Hand != null && player1Hand.size() == 1) return;
 
-        player1Hand = game.dealPlayer1Card();
+        player1Hand = game.generatePlayer1Card();
         player1DealtCardRank = game.getplayer1DealtCardRank();
         player1DealtCardSuit = game.getplayer1DealtCardSuit();
 
@@ -101,7 +101,7 @@ public class FastGame extends AppCompatActivity {
 
 
             player1CardDetails = rank + " of " + suit;
-            player1EachIcon = card.getCardIcon(player1CardDetails);
+            player1EachIcon = card.getCardImage(player1CardDetails);
 
             setCardImage(player1EachIcon, player1CardIconImageViews.get(imageViewIndex));
             imageViewIndex++;
@@ -125,7 +125,7 @@ public class FastGame extends AppCompatActivity {
 
         if(player2Hand != null && player2Hand.size() == 1) return;
 
-        player2Hand = game.dealPlayer2Card();
+        player2Hand = game.generatePlayer2Card();
         player2DealtCardRank = game.getplayer2DealtCardRank();
         player2DealtCardSuit = game.getplayer2DealtCardSuit();
 
@@ -134,7 +134,7 @@ public class FastGame extends AppCompatActivity {
             Rank rank = card.getRank();
 
             player2CardDetails = rank + " of " + suit;
-            player2EachIcon = card.getCardIcon(player2CardDetails);
+            player2EachIcon = card.getCardImage(player2CardDetails);
 
             setCardImage(player2EachIcon, player2CardIconImageViews.get(ImageIndex));
             ImageIndex++;
@@ -145,8 +145,8 @@ public class FastGame extends AppCompatActivity {
     }
 
     public void onResultClick(View view){
-        player1HandNewValue = game.getPlayer1HandNewValue();
-        player2HandNewValue = game.getPlayer2HandNewValue();
+        player1HandNewValue = game.getPlayer1HandValue();
+        player2HandNewValue = game.getPlayer2HandValue();
         String outcome = game.getResult(player1HandNewValue, player2HandNewValue);
         textResult.setText(outcome);
     }

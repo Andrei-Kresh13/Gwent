@@ -4,52 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2E2E"
     android:screenOrientation="landscape"
     tools:context=".Colods.Wildness">
 
     <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="1027dp"
-        android:layout_height="423dp"
-        app:srcCompat="@drawable/fon"
-        tools:layout_editor_absoluteX="-137dp"
-        tools:layout_editor_absoluteY="4dp" />
-
-    <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="91dp"
-        android:layout_height="134dp"
+        android:layout_width="130dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/one_of_wildness" />
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="78dp"
-        android:layout_height="136dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
+        android:layout_width="115dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/two_of_wildness" />
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="89dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginLeft="296dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="150dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="388dp"
+        android:layout_marginLeft="388dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/three_of_wildness" />
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="124dp"
-        android:layout_height="136dp"
-        android:layout_marginStart="496dp"
-        android:layout_marginLeft="496dp"
+        android:layout_width="162dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="568dp"
+        android:layout_marginLeft="568dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -57,11 +54,11 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="197dp"
-        android:layout_height="176dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="157dp"
+        android:layout_height="195dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/five_of_wildness" />
@@ -70,8 +67,8 @@
         android:id="@+id/imageView18"
         android:layout_width="133dp"
         android:layout_height="201dp"
-        android:layout_marginStart="364dp"
-        android:layout_marginLeft="364dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginLeft="304dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,9 +78,9 @@
         android:id="@+id/imageView19"
         android:layout_width="169dp"
         android:layout_height="196dp"
-        android:layout_marginStart="536dp"
-        android:layout_marginLeft="536dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="480dp"
+        android:layout_marginLeft="480dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/seven_of_wildness" />

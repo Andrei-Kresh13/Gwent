@@ -49,7 +49,7 @@ public class Game {
     }
 
 
-    public ArrayList<Card> dealPlayer1Card() {
+    public ArrayList<Card> generatePlayer1Card() {
         player1Hand = hand1.buildHand();
         Player player1  = new Player("Player1", hand1);
         player1Name = player1.getName();
@@ -57,7 +57,7 @@ public class Game {
         player1DealtCardSuit = hand1.getCardSuit();
         player1DealtCardRank = hand1.getCardRank();
 
-        player1Hand = hand1.getCardsInHand();
+        player1Hand = hand1.getCardsHand();
         for (Card card:player1Hand) {
             Suit suit = card.getSuit();
             Rank rank = card.getRank();
@@ -70,7 +70,7 @@ public class Game {
         return player1Hand;
     }
 
-    public int getPlayer1HandNewValue() {
+    public int getPlayer1HandValue() {
         return player1HandNewValue;
     }
 
@@ -84,7 +84,7 @@ public class Game {
 
 
 
-    public ArrayList<Card> dealPlayer2Card() {
+    public ArrayList<Card> generatePlayer2Card() {
         player2Hand = hand2.buildHand();
         Player player2  = new Player("Player2", hand2);
         player2Name = player2.getName();
@@ -92,7 +92,7 @@ public class Game {
         player2DealtCardSuit = hand2.getCardSuit();
         player2DealtCardRank = hand2.getCardRank();
 
-        player2Hand = hand2.getCardsInHand();
+        player2Hand = hand2.getCardsHand();
         for (Card card:player2Hand) {
             Suit suit = card.getSuit();
             Rank rank = card.getRank();
@@ -105,7 +105,7 @@ public class Game {
         return player2Hand;
     }
 
-    public int getPlayer2HandNewValue() {
+    public int getPlayer2HandValue() {
         return player2HandNewValue;
     }
 
@@ -118,8 +118,8 @@ public class Game {
     }
 
     public String getResult(int player1HandNewValue, int player2HandNewValue) {
-        player1HandNewValue = getPlayer1HandNewValue();
-        player2HandNewValue = getPlayer2HandNewValue();
+        player1HandNewValue = getPlayer1HandValue();
+        player2HandNewValue = getPlayer2HandValue();
         result = rule.getResult(player1HandNewValue, player2HandNewValue);
         if (result.equals("Player1")) {
             resultMessage = player1.getName() + " победитель!!!";
@@ -130,17 +130,5 @@ public class Game {
         }
         return resultMessage;
     }
-    public String getResultWithName(){
-        player1HandNewValue = getPlayer1HandNewValue();
-        player2HandNewValue = getPlayer2HandNewValue();
-        result = rule.getResult(player1HandNewValue, player2HandNewValue);
-        if (result.equals("Player1")) {
-            resultMessage = player1.getName() + " is the winner!!!";
-        } else if (result.equals("Player2")) {
-            resultMessage = player2.getName() + " is the winner!!!";
-        } else {
-            resultMessage = "It's a draw!!!";
-        }
-        return resultMessage;
-    }
+
 }

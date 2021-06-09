@@ -4,80 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2E2E"
     android:screenOrientation="landscape"
     tools:context=".Colods.Human">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="146dp"
-        android:layout_height="151dp"
+        android:layout_width="160dp"
+        android:layout_height="161dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/one_of_human" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="145dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="154dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/two_of_human" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="116dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="616dp"
-        android:layout_marginLeft="616dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="147dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="608dp"
+        android:layout_marginLeft="608dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/three_of_human" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="137dp"
-        android:layout_height="139dp"
-        android:layout_marginStart="400dp"
-        android:layout_marginLeft="400dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="155dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="408dp"
+        android:layout_marginLeft="408dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/four_of_human" />
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="152dp"
-        android:layout_height="147dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="170dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/five_of_human" />
 
     <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="162dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="173dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView21"
         app:srcCompat="@drawable/six_of_human" />
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="140dp"
-        android:layout_height="159dp"
-        android:layout_marginStart="476dp"
-        android:layout_marginLeft="476dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="147dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="516dp"
+        android:layout_marginLeft="516dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/seven_of_human" />
