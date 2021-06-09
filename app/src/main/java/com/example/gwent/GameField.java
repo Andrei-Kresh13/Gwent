@@ -49,18 +49,18 @@ public class GameField extends AppCompatActivity {
 
     TextView textPlayer1LatestCard;
     TextView textPlayer2LatestCard;
-    TextView textresultofgame;
+    TextView textResOfGame;
 
 
-    ImageView player1FirstCardImage;
-    ImageView player1SecondCardImage;
-    ImageView player1ThirdCardImage;
-    ImageView player1FourthCardImage;
+    ImageView player1CardOneImage;
+    ImageView player1CardTwoImage;
+    ImageView player1CardThreeImage;
+    ImageView player1CardFourImage;
 
-    ImageView player2FirstCardImage;
-    ImageView player2SecondCardImage;
-    ImageView player2ThirdCardImage;
-    ImageView player2FourthCardImage;
+    ImageView player2CardOneImage;
+    ImageView player2CardTwoImage;
+    ImageView player2CardThreeImage;
+    ImageView player2CardFourImage;
 
 
     @Override
@@ -89,18 +89,18 @@ public class GameField extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
-        player1FirstCardImage = (ImageView) findViewById(R.id.player1FirstCard);
-        player1SecondCardImage = (ImageView) findViewById(R.id.player1SecondCard);
-        player1ThirdCardImage = (ImageView) findViewById(R.id.player1ThirdCard);
-        player1FourthCardImage = (ImageView) findViewById(R.id.player1FourthCard);
+        player1CardOneImage = (ImageView) findViewById(R.id.player1FirstCard);
+        player1CardTwoImage = (ImageView) findViewById(R.id.player1SecondCard);
+        player1CardThreeImage = (ImageView) findViewById(R.id.player1ThirdCard);
+        player1CardFourImage = (ImageView) findViewById(R.id.player1FourthCard);
 
 
-        player2FirstCardImage = (ImageView) findViewById(R.id.player2FirstCard);
-        player2SecondCardImage = (ImageView) findViewById(R.id.player2SecondCard);
-        player2ThirdCardImage = (ImageView) findViewById(R.id.player2ThirdCard);
-        player2FourthCardImage = (ImageView) findViewById(R.id.player2FourthCard);
+        player2CardOneImage = (ImageView) findViewById(R.id.player2FirstCard);
+        player2CardTwoImage = (ImageView) findViewById(R.id.player2SecondCard);
+        player2CardThreeImage = (ImageView) findViewById(R.id.player2ThirdCard);
+        player2CardFourImage = (ImageView) findViewById(R.id.player2FourthCard);
 
-        textresultofgame = (TextView) findViewById(R.id.textResult);
+        textResOfGame = (TextView) findViewById(R.id.textResult);
     }
 
 
@@ -109,10 +109,10 @@ public class GameField extends AppCompatActivity {
         Player1AllImages = new ArrayList<>();
 
         ArrayList<ImageView> player1CardImages = new ArrayList<>();
-        player1CardImages.add(player1FirstCardImage);
-        player1CardImages.add(player1SecondCardImage);
-        player1CardImages.add(player1ThirdCardImage);
-        player1CardImages.add(player1FourthCardImage);
+        player1CardImages.add(player1CardOneImage);
+        player1CardImages.add(player1CardTwoImage);
+        player1CardImages.add(player1CardThreeImage);
+        player1CardImages.add(player1CardFourImage);
 
         int index = 0;
 
@@ -146,10 +146,10 @@ public class GameField extends AppCompatActivity {
         Player2AllImages = new ArrayList<String>();
 
         ArrayList<ImageView> player2CardImages = new ArrayList<>();
-        player2CardImages.add(player2FirstCardImage);
-        player2CardImages.add(player2SecondCardImage);
-        player2CardImages.add(player2ThirdCardImage);
-        player2CardImages.add(player2FourthCardImage);
+        player2CardImages.add(player2CardOneImage);
+        player2CardImages.add(player2CardTwoImage);
+        player2CardImages.add(player2CardThreeImage);
+        player2CardImages.add(player2CardFourImage);
 
         int index = 0;
 
@@ -178,7 +178,7 @@ public class GameField extends AppCompatActivity {
         player1Handnewvalue = game.getPlayer1HandValue();
         player2Handnewvalue = game.getPlayer2HandValue();
         String result = game.getResult(player1Handnewvalue, player2Handnewvalue);
-        textresultofgame.setText(result);
+        textResOfGame.setText(result);
 
     }
 

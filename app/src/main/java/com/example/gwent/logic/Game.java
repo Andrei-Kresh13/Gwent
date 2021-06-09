@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Game {
 
-    private int player1HandOldValue;
+    private int player1HandlastValue;
     private int player1HandNewValue;
-    private int player2HandOldValue;
+    private int player2HandlastValue;
     private int player2HandNewValue;
 
     private Suit player1DealtCardSuit;
@@ -21,7 +21,7 @@ public class Game {
     private String player2Name;
 
     private String result;
-    private String resultMessage;
+    private String resultMsg;
 
     Hand hand1 = new Hand();
     Hand hand2 = new Hand();
@@ -38,9 +38,9 @@ public class Game {
         this.player2Name = player2Name;
         this.player1Hand = new ArrayList<Card>();
         this.player2Hand = new ArrayList<Card>();
-        this.player1HandOldValue = player1HandOldValue;
+        this.player1HandlastValue = player1HandlastValue;
         this.player1HandNewValue = player1HandNewValue;
-        this.player2HandOldValue = player2HandOldValue;
+        this.player2HandlastValue = player2HandlastValue;
         this.player2HandNewValue = player2HandNewValue;
         this.player1DealtCardSuit = player1DealtCardSuit;
         this.player1DealtCardRank = player1DealtCardRank;
@@ -50,7 +50,7 @@ public class Game {
 
 
     public ArrayList<Card> generatePlayer1Card() {
-        player1Hand = hand1.buildHand();
+        player1Hand = hand1.createHand();
         Player player1  = new Player("Player1", hand1);
         player1Name = player1.getName();
 
@@ -64,8 +64,8 @@ public class Game {
             int cardValue = card.getValue(rank);
         }
 
-        player1HandNewValue = player1HandOldValue + hand1.getCardValue();
-        player1HandOldValue = player1HandNewValue;
+        player1HandNewValue = player1HandlastValue + hand1.getCardValue();
+        player1HandlastValue = player1HandNewValue;
 
         return player1Hand;
     }
@@ -85,7 +85,7 @@ public class Game {
 
 
     public ArrayList<Card> generatePlayer2Card() {
-        player2Hand = hand2.buildHand();
+        player2Hand = hand2.createHand();
         Player player2  = new Player("Player2", hand2);
         player2Name = player2.getName();
 
@@ -99,8 +99,8 @@ public class Game {
             int cardValue = card.getValue(rank);
         }
 
-        player2HandNewValue = player2HandOldValue + hand2.getCardValue();
-        player2HandOldValue = player2HandNewValue;
+        player2HandNewValue = player2HandlastValue + hand2.getCardValue();
+        player2HandlastValue = player2HandNewValue;
 
         return player2Hand;
     }
@@ -120,15 +120,15 @@ public class Game {
     public String getResult(int player1HandNewValue, int player2HandNewValue) {
         player1HandNewValue = getPlayer1HandValue();
         player2HandNewValue = getPlayer2HandValue();
-        result = rule.getResult(player1HandNewValue, player2HandNewValue);
+        result = rule.getResultOfGame(player1HandNewValue, player2HandNewValue);
         if (result.equals("Player1")) {
-            resultMessage = player1.getName() + " победитель!!!";
+            resultMsg = player1.getName() + " победитель!!!";
         } else if (result.equals("Player2")) {
-            resultMessage = player2.getName() + " победитель!!!";
+            resultMsg = player2.getName() + " победитель!!!";
         } else {
-            resultMessage = "Ничья!!!";
+            resultMsg = "Ничья!!!";
         }
-        return resultMessage;
+        return resultMsg;
     }
 
 }

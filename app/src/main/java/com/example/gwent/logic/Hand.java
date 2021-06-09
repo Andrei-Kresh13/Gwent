@@ -14,7 +14,7 @@ public class Hand {
     Deck deck = new Deck();
 
     public Hand() {
-        this.cardsHand = new ArrayList<Card>();
+        this.cardsHand = new ArrayList<>();
         this.suit = suit;
         this.rank = rank;
         this.cardValue  = cardValue;
@@ -22,7 +22,7 @@ public class Hand {
         this.handLenght = handLenght;
     }
 
-    public ArrayList<Card> buildHand() {
+    public ArrayList<Card> createHand() {
         this.handValue = 0;
         Card newCard = deck.generateRandomCard();
         this.cardsHand.add(newCard);

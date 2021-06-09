@@ -44,7 +44,7 @@ public class Rule {
         return value;
     }
 
-    public String getResult(int player1HandNewValue, int player2HandNewValue) {
+    public String getResultOfGame(int player1HandNewValue, int player2HandNewValue) {
         if (player1HandNewValue > player2HandNewValue) {
             return "Player1";
         } else if (player2HandNewValue > player1HandNewValue) {
