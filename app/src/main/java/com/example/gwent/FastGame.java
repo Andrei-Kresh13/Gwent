@@ -30,22 +30,22 @@ public class FastGame extends AppCompatActivity {
     private Suit player1DealtCardSuit;
     private Rank player1DealtCardRank;
 
-    private int player1HandNewValue;
+    private int player1HandValue;
     private ArrayList<Card> player1Hand;
     private ArrayList<String> hand1Details;
     private String player1CardDetails;
-    private String player1EachIcon;
-    private ArrayList<String> Player1AllIcons;
+    private String player1EveryImage;
+    private ArrayList<String> Player1AllImages;
 
     private Suit player2DealtCardSuit;
     private Rank player2DealtCardRank;
 
-    private int player2HandNewValue;
+    private int player2HandValue;
     private ArrayList<Card> player2Hand;
     private ArrayList<String> hand2Details;
     private String player2CardDetails;
-    private String player2EachIcon;
-    private ArrayList<String> Player2AllIcons;
+    private String player2EachImage;
+    private ArrayList<String> Player2AllImages;
 
     TextView textResult;
 
@@ -80,14 +80,14 @@ public class FastGame extends AppCompatActivity {
         textResult = findViewById(R.id.textResultOfFastGame);
     }
 
-    public void onFirstPlayerClick(View view){
+    public void onPlayer1Click(View view){
         hand1Details = new ArrayList<>();
-        Player1AllIcons = new ArrayList<>();
+        Player1AllImages = new ArrayList<>();
 
         ArrayList<ImageView> player1CardIconImageViews = new ArrayList<>();
         player1CardIconImageViews.add(player1CardImage);
 
-        int imageViewIndex = 0;
+        int Index = 0;
 
         if(player1Hand != null && player1Hand.size() == 1) return;
 
@@ -101,12 +101,12 @@ public class FastGame extends AppCompatActivity {
 
 
             player1CardDetails = rank + " of " + suit;
-            player1EachIcon = card.getCardImage(player1CardDetails);
+            player1EveryImage = card.getCardImage(player1CardDetails);
 
-            setCardImage(player1EachIcon, player1CardIconImageViews.get(imageViewIndex));
-            imageViewIndex++;
+            setCardImage(player1EveryImage, player1CardIconImageViews.get(Index));
+            Index++;
 
-            Player1AllIcons.add(player1EachIcon);
+            Player1AllImages.add(player1EveryImage);
             hand1Details.add(player1CardDetails);
         }
         for (String player1Card: hand1Details) {
@@ -115,13 +115,13 @@ public class FastGame extends AppCompatActivity {
 
     }
 
-    public void onSecondPlayerClick(View view){
+    public void onPlayer2Click(View view){
         hand2Details = new ArrayList<>();
-        Player2AllIcons = new ArrayList<>();
+        Player2AllImages = new ArrayList<>();
 
         ArrayList<ImageView> player2CardIconImageViews = new ArrayList<>();
         player2CardIconImageViews.add(player2CardImage);
-        int ImageIndex = 0;
+        int Index = 0;
 
         if(player2Hand != null && player2Hand.size() == 1) return;
 
@@ -134,20 +134,20 @@ public class FastGame extends AppCompatActivity {
             Rank rank = card.getRank();
 
             player2CardDetails = rank + " of " + suit;
-            player2EachIcon = card.getCardImage(player2CardDetails);
+            player2EachImage = card.getCardImage(player2CardDetails);
 
-            setCardImage(player2EachIcon, player2CardIconImageViews.get(ImageIndex));
-            ImageIndex++;
+            setCardImage(player2EachImage, player2CardIconImageViews.get(Index));
+            Index++;
 
-            Player2AllIcons.add(player2EachIcon);
+            Player2AllImages.add(player2EachImage);
             hand2Details.add(player2CardDetails);
         }
     }
 
-    public void onResultClick(View view){
-        player1HandNewValue = game.getPlayer1HandValue();
-        player2HandNewValue = game.getPlayer2HandValue();
-        String outcome = game.getResult(player1HandNewValue, player2HandNewValue);
+    public void onResClick(View view){
+        player1HandValue = game.getPlayer1HandValue();
+        player2HandValue = game.getPlayer2HandValue();
+        String outcome = game.getResult(player1HandValue, player2HandValue);
         textResult.setText(outcome);
     }
 

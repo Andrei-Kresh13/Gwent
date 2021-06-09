@@ -147,7 +147,7 @@
         android:layout_marginEnd="296dp"
         android:layout_marginRight="296dp"
         android:layout_marginBottom="12dp"
-        android:onClick="onResultClick"
+        android:onClick="onResClick"
         android:text="Результат"
         app:backgroundTint="#1E1E1E"
         app:layout_constraintBottom_toTopOf="@+id/textResult"
